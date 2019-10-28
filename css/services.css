@@ -1,0 +1,70 @@
+body{
+    overflow-x: hidden;
+
+}
+#apresentation_table{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  font-family: "Open Sans";
+}
+
+#slogan_table{
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  margin: 100px 0 0 0;
+}
+
+#apresentation_table img{
+  width: 50%;
+  transform: rotate(10deg);
+}
+
+#services_serv{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.service_box_serv{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 70%;
+  margin-top: 60px;
+}
+
+.service_box_serv img{
+  width: 20%;
+}
+
+.service_title{
+  font-family: 'Open Sans', sans-serif;
+  color: var(--grey-color);
+  margin-top: 10px;
+}
+
+.service_description{
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 10px;
+}
+
+#points_serv img{
+  width: 70%;
+  float: right;
+  margin-right: -200px;
+}
+
+#portefolio{
+  background-image: url(../img/serv_background.png);
+  background-size: cover;
+  height:100vh;
+  transform: rotate(-2deg);
+}
+
+#portefolio h2{
+  font-family: 'Open Sans', sans-serif;
+  margin: 100px 0 0 100px;
+  transform: rotate(2deg);
+}

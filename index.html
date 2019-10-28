@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="css/index.css" rel="stylesheet" type="text/css">
+  <link href="css/nav.css" rel="stylesheet" type="text/css">
+  <link href="css/footer.css" rel="stylesheet" type="text/css">
+  <link href="css/slick.css" rel="stylesheet" type="text/css" />
+  <link href="css/slick-theme.css" rel="stylesheet" type="text/css" />
+  <title>BASE IPAM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <header>
+    <a href=index.html> <img src="img/logo.svg"> </a>
+        <nav class="menu-">
+          <ul class="navigation_list">
+            <li><a class="navigation_element"href="about.html">Sobre</a></li>
+            <li><a class="navigation_element" href="services.html">Serviços</a></li>
+            <li><a class="navigation_element" href="#" style="background-color:#D2232A;color: white;border-radius: 100px;">Contactos </a></li>
+          </ul>
+        </nav>
+  </header>
+  <main>
+    <div id="montain">
+      <div id="montain_title">
+        <h1> Pioneiros Júniores <br> no Marketing </h1>
+        <h2> Soluções de Marketing Estratégico </h2>
+        <div class="call-action"> </div>
+      </div>
+    </div>
+    <div id="quem_somos">
+      <div class="title_grey">
+        <h1> Quem Somos?</h1>
+      </div>
+      <div class=subtitle_grey>
+        <p> Somos a única Júnior Empresa do país especializada em marketing, que trabalha com empresas que apostam no talento jovem e ambicionam o seu crescimento contínuo aliado à inovação e diferenciação. </p>
+      </div>
+    </div>
+    <div id="services">
+      <div class="title_grey">
+        <h1> Serviços </h1>
+      </div>
+      <div class="service_box">
+        <img src="img/mark.png">
+        <div class="subtitle_ grey"> Plano de Marketing </div>
+      </div>
+      <div class="service_box">
+        <img src="img/comuni.png">
+        <div class="subtitle_ grey"> Plano de Comunicação </div>
+      </div>
+      <div class="service_box">
+        <img src="img/study.png">
+        <div class="subtitle_ grey"> Estudos de Mercado</div>
+      </div>
+    </div>
+    </div>
+    <div id="work-process">
+      <div class="title_grey">
+        <h1> Processo de trabalho </h1>
+      </div>
+      <div class="container">
+        <ul class="progress-bar">
+          <li id="step1" class="active"> Diagnóstico </li>
+          <li id="step2"> Planeamento Estratégico </li>
+          <li id="step3"> Entrega </li>
+        </ul>
+      </div>
+      <button onClick=next()>Next Step</button>
+      <div class="subtitle_grey" id="prog_desc">
+        <p id="desc1"> Análise da situação atual da empresa e identificação das suas necessidades. </p>
+    </div>
+    <div id="wrapper" class="thing">
+      <div> <img src=logos/1.png> </div>
+      <div> <img src=logos/2.jpeg> </div>
+      <div> <img src=logos/3.png> </div>
+      <div> <img src=logos/4.png> </div>
+      <div> <img src=logos/5.jpeg> </div>
+      <div> <img src=logos/6.png> </div>
+      <div> <img src=logos/7.png> </div>
+    </div>
+    </main>
+    <footer>
+      <div class="infor_logo">
+        <div class= "logo"> <img src="img/logo_footer.png"> </div>
+        <div class="infor">
+          marketing@baseipam.pt<br><br>
+          R. Manuel Pinto de Azevedo <br>
+          748 4100-320 Porto Portugal
+        </div>
+      </div>
+      <div class="footer_other">
+        <hr>
+        <div class="other">
+          <div class="left-other">
+            <h5> 2019 Base Ipam </h5>
+            <h5> Informação Legal <h5>
+          </div>
+          <div class="right-other">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/baseipam/"> <img src=logos/face.png></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/baseipam/"><img src=logos/insta.png href="about.html"></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/baseipam/"> <img src=logos/in.png href="about.html"></a>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/step-bar.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="js/slick.js"></script>
+            <script type="text/javascript"></script>
+    <script>    
+      $('.autoplay').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      });
+    </script>
+  </body>

@@ -1,0 +1,113 @@
+:root {
+  --grey-color: #636363;
+  --red-color: #D2232A;
+}
+
+#apresentation_about{
+  display: flex;
+  justify-content: center;
+  font-family: "Open Sans";
+}
+
+.slogan{
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  margin: 80px 0 0 -50px;
+  text-align: right;
+  align-items: flex-end;
+}
+
+.call-action_right{
+  background-color: var(--red-color);
+  width: 150px;
+  height: 60px;
+  border-radius: 100px;
+  margin-top: 20px;
+  float: right;
+}
+
+
+#apresentation_about img{
+  width: 55%;
+  transform: rotate(10deg);
+}
+
+#about_us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    background-image: linear-gradient(white 0,5%, #D2232A 99%);
+    font-family: "Open Sans";
+    color: white;
+    height: 400px;
+    transform: skewY(-5deg);
+    -ms- transform: skewY(-5deg);
+    -webkitß- transform: skewY(-5deg);
+}
+
+#about_us h2{
+    margin-top: 50px;
+    text-align: center;
+    transform: skewY(5deg);
+    -ms- transform: skewY(5deg);
+    -webkitß- transform: skewY(5deg);
+}
+
+#about_us p{
+    text-align: center;
+    width:70%;
+    margin-top: 40px;
+    transform: skewY(5deg);
+    -ms- transform: skewY(5deg);
+    -webkitß- transform: skewY(5deg);
+}
+
+.goals-section{
+  margin:150px 0 0 100px;
+}
+
+.goals{
+  font-family: "Open Sans";
+  margin-top: 50px;
+}
+
+.goals h1{
+  color: var(--red-color);
+}
+
+.goals .{
+  color: var(--grey-color);
+}
+
+#tablet{
+  margin-top: 100px;
+  background-color: #e4e4e4;
+  transform: skewY(-5deg);
+  -ms- transform: skewY(-5deg);
+  -webkitß- transform: skewY(-5deg);
+}
+#tablet img{
+  width: 45%;
+  float: right;
+  transform: skewY(5deg);
+  -ms- transform: skewY(5deg);
+  -webkitß- transform: skewY(5deg);
+}
+
+#slogan-tablet{    
+    margin: 150px 0 0 50px;
+    font-family: "Open Sans";
+    color: black;
+    font-weight: 500;
+    font-family: "Open Sans";
+    transform: skewY(5deg);
+    -ms- transform: skewY(-5deg);
+    -webkitß- transform: skewY(-5deg);
+}
+
+#slogan-tablet p{
+    margin: 20px auto;
+    font-size: 1rem;
+}
