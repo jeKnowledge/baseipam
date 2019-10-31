@@ -1,36 +1,43 @@
 :root {
-  --grey-color: #636363;
-  --red-color: #D2232A;
+    --grey-color: #636363;
+    --red-color: #D2232A;
 }
 
-#apresentation_about{
-  display: flex;
-  justify-content: center;
-  font-family: "Open Sans";
+#apresentation_about {
+    display: flex;
+    justify-content: center;
+    font-family: "Open Sans";
 }
 
-.slogan{
-  display: flex;
-  flex-direction: column;
-  z-index: 1;
-  margin: 80px 0 0 -50px;
-  text-align: right;
-  align-items: flex-end;
+.slogan {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    margin: 80px 0 0 -100px;
+    align-items: flex-end;
 }
 
-.call-action_right{
-  background-color: var(--red-color);
-  width: 150px;
-  height: 60px;
-  border-radius: 100px;
-  margin-top: 20px;
-  float: right;
+.slogan h1{
+    font-size: 2.5rem;
 }
 
+.slogan h2{
+    font-size: 1.5rem;
+    font-weight: lighter;    
+}
+
+.call-action_right {
+    background-color: var(--red-color);
+    width: 150px;
+    height: 60px;
+    border-radius: 100px;
+    margin-top: 20px;
+    float: right;
+}
 
 #apresentation_about img{
-  width: 55%;
-  transform: rotate(10deg);
+    width: 55%;
+    transform: rotate(-10deg);
 }
 
 #about_us{
@@ -48,8 +55,7 @@
 }
 
 #about_us h2{
-    margin-top: 50px;
-    text-align: center;
+    padding-top: 100px;
     transform: skewY(5deg);
     -ms- transform: skewY(5deg);
     -webkitß- transform: skewY(5deg);
@@ -57,7 +63,7 @@
 
 #about_us p{
     text-align: center;
-    width:70%;
+    width:60%;
     margin-top: 40px;
     transform: skewY(5deg);
     -ms- transform: skewY(5deg);
@@ -65,7 +71,7 @@
 }
 
 .goals-section{
-  margin:150px 0 0 100px;
+  padding:150px 0 0 100px;
 }
 
 .goals{
@@ -82,26 +88,26 @@
 }
 
 #tablet{
-  margin-top: 100px;
-  background-color: #e4e4e4;
-  transform: skewY(-5deg);
-  -ms- transform: skewY(-5deg);
-  -webkitß- transform: skewY(-5deg);
+    margin-top: 100px;
+    height: 1000px;
+    background-color: #e4e4e4;
+    transform: skewY(-5deg);
+    -ms- transform: skewY(-5deg);
+    -webkitß- transform: skewY(-5deg);
 }
 #tablet img{
-  width: 45%;
-  float: right;
-  transform: skewY(5deg);
-  -ms- transform: skewY(5deg);
-  -webkitß- transform: skewY(5deg);
+    width: 50%;
+    margin-right: -100px;
+    float: right;
+    transform: skewY(5deg);
+    -ms- transform: skewY(5deg);
+    -webkitß- transform: skewY(5deg);
 }
 
 #slogan-tablet{    
-    margin: 150px 0 0 50px;
+    margin: 200px 0 0 50px;
     font-family: "Open Sans";
     color: black;
-    font-weight: 500;
-    font-family: "Open Sans";
     transform: skewY(5deg);
     -ms- transform: skewY(-5deg);
     -webkitß- transform: skewY(-5deg);
@@ -110,4 +116,55 @@
 #slogan-tablet p{
     margin: 20px auto;
     font-size: 1rem;
+}
+
+@media screen and (max-width: 1060px) {
+    #apresentation_about img{
+        width: 500px;
+    }
+    
+    .slogan{
+            margin: 80px 0 0 -150px;
+    }
+    
+    .slogan h1{
+        font-size: 2rem;
+    }
+
+    .slogan h2{
+        font-size: 1rem;
+        font-weight: lighter;    
+    }
+    
+    #about_us h2{
+        padding-top: 80px;
+    }
+    
+    .goals-section{
+        padding:100px 50px 0 50px;
+    }
+ 
+}
+
+@media screen and (max-width: 768px) {
+    #apresentation_about img{
+        width: 300px;
+    }
+    .slogan{
+        margin: 50px 0 0 -150px;
+    }
+    
+    .slogan h1{
+        font-size: 1.5rem;
+    }
+    
+    .call-action_right {
+    width: 100px;
+    height: 40px;
+    }
+    
+    .goals-section{
+    padding:100px 20px 0 20px;
+    }
+
 }

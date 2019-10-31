@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 :root {
   --grey-color: #636363;
   --red-color: #D2232A;
@@ -7,84 +11,88 @@
   margin: 0;
 }
 
-main{
-  display: grid;
+#montain {
+    background-image: url(../img/montain.png);
+    background-size: cover;
+    height: 90vh;
 }
 
-#montain{
-  background-image: url(../img/montain.png);
-  background-size: cover;
-  height: 100vh;
+#montain_title {
+    margin: 50px 0 0 100px;
+    font-family: "Open Sans";
+    color: black;
 }
 
-#montain_title{
-  margin: 100px 0 0 100px;
-  font-family: "Open Sans";
-  color: black;
+#montain_title h1{
+    font-size: 2.5rem
 }
 
-#montain_title h2{
-  color: var(--grey-color);
-  margin-top:10px;
+#montain_title h2 {
+    margin-top:10px;
+    font-size: 1.5rem;
+    font-weight: lighter;
 }
 
-.call-action{
-  background-color: var(--red-color);
-  width: 150px;
-  height: 60px;
-  border-radius: 100px;
-  margin-top: 20px;
+.call-action {
+    background-color: var(--red-color);
+    width: 150px;
+    height: 60px;
+    border-radius: 100px;
+    margin-top: 20px;
 }
 
-#quem_somos{
-  align-items: center;
-  align-content: space-between;
-  display: flex;
-  flex-direction: column;
-  margin-top: 100px;
+#quem_somos {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
 }
 
-.title_grey{
-  font-family: 'Open Sans', sans-serif;
-  color: var(--grey-color);
-  grid-column: 2/3;
-  grid-row: 1/2;
-  text-align: center;
+.title_grey {
+    color: var(--grey-color);
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 1.3rem;
 }
 
-.subtitle_grey{
+.subtitle_grey {
   font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
   color: var(--grey-color);
   margin: 20px;
-  width: 50%;
+  width: 40%;
   text-align: center;
 }
 
-#services{
-  background-image: url(../img/index_background.png);
-  background-size: cover;
-  height:100vh;
-  display: grid;
-  grid-template-rows: 60% 10%;
-  align-items: center;
-  margin-top: 100px;
+#services {
+    background-image: url(../img/index_background.png);
+    background-size: cover;
+    height:100vh;
+    display: flex;
+    flex-direction: column;    
 }
 
-.service_box{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-row: 2/3;
-  font-family: 'Open Sans', sans-serif;
-  color: var(--grey-color);
+#service-gifs {
+    margin: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
 }
 
-.service_box img{
-  width: 50%;
+.service_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--grey-color);
 }
 
-#work-process{
+.service_box p {
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+#work-process {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -160,24 +168,39 @@ main{
 }
 
 @media screen and (max-width: 1060px) {
-  #montain{
-    height:60vh;
-  }
-
-  #montain_title{
-    margin: 50px 0 0 50px;
-  }
-
-  #services{
-  grid-template-rows: 10% 20% 20%;
-  grid-template-columns: 100%;
-  }
+    #montain_title{
+        margin: 50px 0 0 100px;
+    }
+  
+    .service_box img{
+        width: 250px;
+    }
+}
 
 @media screen and (max-width: 768px) {
-  #montain{
-    height:50vh;
-  }
-  #montain_title{
-    margin: 20px 0 0 20px;
-  }
+    
+    #montain_title{
+        margin: 50px 0 0 30px;
+    }
+    
+    #montain_title h1{
+    font-size: 2rem
+    }
+
+    #montain_title h2 {
+    font-size: 1.5rem;
+    }
+    
+    #service-gifs{
+        flex-direction: column;
+    }
+    .service_box{
+        flex-direction: row;
+        margin: 10px;
+    }
+    .service_box img{
+        width: 30%;
+        flex-wrap: wrap;
+    }
+    
 }

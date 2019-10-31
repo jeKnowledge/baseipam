@@ -4,25 +4,21 @@ footer{
     background-color: #e4e4e4;
 }
 
-.footer_container{
-    width: 80%;
-}
-
-.infor_logo{
+.logo_infor{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.infor{
-    font-family: "Open Sans";
-    font-size: 0,5em;
-    margin-right: 100px;
+.base-logo img{
+    padding: 20px 0 0 85px;
+    width: 200px;
 }
 
-.logo img{
-    margin: 20px 0 0 100px;
-    width: 30%;
+.right-infor{
+    font-family: "Open Sans";
+    font-size: 0,5em;
+    padding-right: 100px;
 }
 
 .footer_other{
@@ -57,19 +53,24 @@ footer{
 
 .right-other{
     grid-area: social-media;
-
 }
-
-
-.right-other a{
-    padding: 10px
-    justify-self:end
-}
-
 
 .right-other img{
-    width:5%
+    width: 5%;
+    margin:10px;
 }
+
+
+@media screen and (max-width: 1060px) {
+ 
+}
+
+@media screen and (max-width: 768px) {
+    .left-other{
+        display: none;
+    }
+}
+
 
 
 

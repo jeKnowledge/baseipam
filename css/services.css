@@ -1,70 +1,147 @@
-body{
-    overflow-x: hidden;
-
-}
 #apresentation_table{
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-around;
-  font-family: "Open Sans";
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    font-family: "Open Sans";
 }
 
 #slogan_table{
-  display: flex;
-  flex-direction: column;
-  z-index: 1;
-  margin: 100px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0 0 50px;
+}
+
+#slogan_table h1{
+    font-size:3rem;
+}
+
+#slogan_table h2{
+    font-size: 1.5rem;
+    font-weight: lighter;
 }
 
 #apresentation_table img{
-  width: 50%;
-  transform: rotate(10deg);
+    width: 600px;
+    transform: rotate(5deg);
+    padding: 20px;
 }
 
 #services_serv{
-display: flex;
-flex-direction: column;
-align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 90px;
 }
 
 .service_box_serv{
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  width: 70%;
-  margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 70%;
+    margin-top: 60px;
 }
 
 .service_box_serv img{
-  width: 20%;
+    width: 200px;
 }
 
 .service_title{
-  font-family: 'Open Sans', sans-serif;
-  color: var(--grey-color);
-  margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--grey-color);
+    padding: 10px;
 }
 
 .service_description{
-  font-family: 'Open Sans', sans-serif;
-  margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px;
 }
 
 #points_serv img{
-  width: 70%;
-  float: right;
-  margin-right: -200px;
+    width: 700px;
+    float: right;
+    margin-right: -800px;
 }
 
 #portefolio{
-  background-image: url(../img/serv_background.png);
-  background-size: cover;
-  height:100vh;
-  transform: rotate(-2deg);
+    background-image: url(../img/serv_background.png);
+    background-size: cover;
+    height:100vh;
 }
 
 #portefolio h2{
-  font-family: 'Open Sans', sans-serif;
-  margin: 100px 0 0 100px;
-  transform: rotate(2deg);
+    font-family: 'Open Sans', sans-serif;
+    margin: 100px 0 0 100px;
 }
+
+#project-logo {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-auto-rows: 1fr 1fr 1fr;
+}
+
+.p-logo{
+    justify-self:center;
+    align-self: center;
+}
+
+#project-logo img{
+    width: 150px;
+}
+
+@media screen and (max-width: 1060px) {
+    #apresentation_table img{
+        width: 400px;
+    }
+    
+    #slogan_table h1 {
+        font-size:2rem;
+    }
+
+    #slogan_table h2 {
+        font-size: 1.5rem;
+    }
+    
+    #points_serv img{
+        width: 550px;
+        margin-right: -600px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #apresentation_table img{
+        width: 250px;
+        padding: 10px;
+    }
+    
+    #slogan_table{
+        padding: 50px 0 0 50px;
+    }
+    
+    .call-action{
+        width: 100px;
+        height: 40px;
+    }
+    
+    #slogan_table h1 {
+        font-size:1.5rem;
+    }
+    
+    #slogan_table h2 {
+        font-size: 1rem;
+    }
+    
+    .service_description{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1rem;
+        width:100%; 
+    }
+    
+    #points_serv img{
+        width: 500px;
+        margin-right: -550px;
+    }
+
+
+}
+
