@@ -24,7 +24,7 @@
       <div id="slogan_table">
         <h1> Pioneiros Júniores <br> no Marketing </h1>
         <h2> Soluções de Marketing Estratégico </h2>
-        <div class="call-action"> </div>
+        <div class="call-action"></div>
       </div>
       </section>
     <section id="services_serv">
@@ -54,21 +54,29 @@
         </div>
     </section>
     <section id="portefolio">
-      <h2> Portefólio </h2>
-        <div id="project-logo">
-            <div class="p-logo"> <img src=logos/8.jpg> </div>
-            <div class="p-logo"> <img src=logos/9.png> </div>
-            <div class="p-logo"> <img src=logos/10.png> </div>
-            <div class="p-logo"> <img src=logos/11.png> </div>
-            <div class="p-logo"> <img src=logos/12.jpg> </div>
-            <div class="p-logo"> <img src=logos/13.png> </div>
-            <div class="p-logo"> <img src=logos/14.png> </div>
-            <div class="p-logo"> <img src=logos/15.jpg> </div>
-            <div class="p-logo"> <img src=logos/16.png> </div>
-            <div class="p-logo"> <img src=logos/17.png> </div>
-            <div class="p-logo"> <img src=logos/18.png> </div>
-            <div class="p-logo"> <img src=logos/3.png> </div>
-            <div class="p-logo"> <img src=logos/7.png> </div>
+      <h2>Portefólio</h2>
+        <div id="filters">
+          <button class="btn active" onclick="filterSelection('all')">Show all</button>
+          <button class="btn" onclick="filterSelection('marketing')">Gestão de Marketing</button>
+          <button class="btn" onclick="filterSelection('comunicacao')">Gestão de Comunicação</button>
+          <button class="btn" onclick="filterSelection('estudos')">Estudos de Mercados</button>
+          <button class="btn" onclick="filterSelection('comercial')">Gestão Comercial</button>
+          <button class="btn" onclick="filterSelection('outros')">Outros</button>
+        </div>
+        <div class="container-logos">
+          <img class="filterDiv estudos" src=logos/8.jpg>
+          <img class="filterDiv comunicacao" src=logos/9.png>
+          <img class="filterDiv comunicacao marketing" src=logos/10.png>
+          <img class="filterDiv outros" src=logos/11.png>
+          <img class="filterDiv outros" src=logos/12.jpg>
+          <img class="filterDiv outros" src=logos/13.png>
+          <img class="filterDiv comunicacao" src=logos/14.png>
+          <img class="filterDiv marketing" src=logos/15.jpg>
+          <img class="filterDiv comunicacao" src=logos/16.png>
+          <img class="filterDiv marketing" src=logos/17.png>
+          <img class="filterDiv comunicacao" src=logos/18.png>
+          <img class="filterDiv outros" src=logos/3.png>
+          <img class="filterDiv comunicacao" src=logos/7.png>
         </div>
     </section>
   </main>
@@ -100,4 +108,49 @@
       </div>
     </footer>
   </body>
-</html>      
+</html>
+
+<script>
+  filterSelection("all")
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("filterDiv");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+  
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    }
+  }
+  
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);     
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+  
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("filters");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+  </script>

@@ -1,39 +1,39 @@
-#apresentation_table{
+#apresentation_table {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
     font-family: "Open Sans";
 }
 
-#slogan_table{
+#slogan_table {
     display: flex;
     flex-direction: column;
     padding: 100px 0 0 50px;
 }
 
-#slogan_table h1{
-    font-size:3rem;
+#slogan_table h1 {
+    font-size: 3rem;
 }
 
-#slogan_table h2{
+#slogan_table h2 {
     font-size: 1.5rem;
     font-weight: lighter;
 }
 
-#apresentation_table img{
+#apresentation_table img {
     width: 600px;
     transform: rotate(5deg);
     padding: 20px;
 }
 
-#services_serv{
+#services_serv {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 90px;
 }
 
-.service_box_serv{
+.service_box_serv {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -41,107 +41,138 @@
     margin-top: 60px;
 }
 
-.service_box_serv img{
+.service_box_serv img {
     width: 200px;
 }
 
-.service_title{
-    font-family: 'Open Sans', sans-serif;
+.service_title {
     color: var(--grey-color);
     padding: 10px;
 }
 
-.service_description{
-    font-family: 'Open Sans', sans-serif;
+.service_description {
     padding: 10px;
 }
 
-#points_serv img{
+#points_serv img {
     width: 700px;
     float: right;
     margin-right: -800px;
 }
 
-#portefolio{
+#portefolio {
+    display: flex;
+    flex-direction: column;
     background-image: url(../img/serv_background.png);
     background-size: cover;
-    height:100vh;
+    height: 110vh;
 }
 
-#portefolio h2{
-    font-family: 'Open Sans', sans-serif;
+#portefolio h2 {
     margin: 100px 0 0 100px;
 }
 
-#project-logo {
-    margin-top: 50px;
+#portefolio #filters {
+    margin: 50px 0 50px 100px;
+}
+
+#portefolio #filters .btn {
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border: 1px solid #d3d3d3;
+    border-radius: 0.25rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+#portefolio #filters .btn:hover {
+    background-color: #d3d3d3;
+}
+
+#portefolio #filters .btn:focus {
+    outline: none;
+}
+
+#portefolio #filters .btn:first-child {
+    margin-left: 0rem;
+}
+
+
+#portefolio #filters .btn:last-child {
+    margin-right: 0rem;
+}
+
+
+.filterDiv {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.container-logos {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 1fr 1fr 1fr;
 }
 
-.p-logo{
-    justify-self:center;
+.container-logos img {
+    width: 150px;
+    height: auto;
+    justify-self: center;
     align-self: center;
 }
 
-#project-logo img{
-    width: 150px;
-}
-
 @media screen and (max-width: 1060px) {
-    #apresentation_table img{
+    #apresentation_table img {
         width: 400px;
     }
-    
+
     #slogan_table h1 {
-        font-size:2rem;
+        font-size: 2rem;
     }
 
     #slogan_table h2 {
         font-size: 1.5rem;
     }
-    
-    #points_serv img{
+
+    #points_serv img {
         width: 550px;
         margin-right: -600px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    #apresentation_table img{
+    #apresentation_table img {
         width: 250px;
         padding: 10px;
     }
-    
-    #slogan_table{
+
+    #slogan_table {
         padding: 50px 0 0 50px;
     }
-    
-    .call-action{
+
+    .call-action {
         width: 100px;
         height: 40px;
     }
-    
+
     #slogan_table h1 {
-        font-size:1.5rem;
+        font-size: 1.5rem;
     }
-    
+
     #slogan_table h2 {
         font-size: 1rem;
     }
-    
-    .service_description{
-        font-family: 'Open Sans', sans-serif;
+
+    .service_description {
         font-size: 1rem;
-        width:100%; 
+        width: 100%;
     }
-    
-    #points_serv img{
+
+    #points_serv img {
         width: 500px;
         margin-right: -550px;
     }
-
-
 }
-
