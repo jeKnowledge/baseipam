@@ -45,7 +45,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 100px;
-    background-image: linear-gradient(white 0,5%, #D2232A 99%);
+    background-image: linear-gradient(#D46A6A 5%, #D2232A 99%);
     font-family: "Open Sans";
     color: white;
     height: 400px;
@@ -87,7 +87,7 @@
   color: var(--grey-color);
 }
 
-#tablet{
+#tablet {
     margin-top: 100px;
     height: 1000px;
     background-color: #e4e4e4;
