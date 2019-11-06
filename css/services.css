@@ -12,11 +12,7 @@
 }
 
 #slogan_table h1 {
-<<<<<<< HEAD
     font-size: 3rem;
-=======
-    font-size:3rem;
->>>>>>> 4b1ac1b0b39143f5a07995323a7835adebaec203
 }
 
 #slogan_table h2 {
@@ -50,19 +46,11 @@
 }
 
 .service_title {
-<<<<<<< HEAD
-=======
-    font-family: 'Open Sans', sans-serif;
->>>>>>> 4b1ac1b0b39143f5a07995323a7835adebaec203
     color: var(--grey-color);
     padding: 10px;
 }
 
 .service_description {
-<<<<<<< HEAD
-=======
-    font-family: 'Open Sans', sans-serif;
->>>>>>> 4b1ac1b0b39143f5a07995323a7835adebaec203
     padding: 10px;
 }
 
