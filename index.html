@@ -9,6 +9,7 @@
     <script type="text/javascript" src="js/step-bar.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://unpkg.com/flooper"></script>
     <title>Base IPAM</title>
   </head>
   <body>
@@ -19,16 +20,29 @@
       <nav>
         <a href="about.html">Sobre</a>
         <a href="services.html">Serviços</a>
-        <a class="navigation_element" href="">Contactos </a>
+        <button class="navigation_element" id="myBtn">Contactos</button>
       </nav>
+      <div id="myModal" class="modal">
+        <form>
+          <span class="close">&times;</span>
+          <label for="name">Nome</label>
+          <input type="text" name="name">
+          <label for="email">Email</label>
+          <input type="email" name="email">
+          <label for="company">Empresa</label>
+          <input type="text" name="company">
+          <label for="subject">Assunto</label>
+          <textarea></textarea>
+          <input type="submit" value="Enviar">
+        </form>
+      </div>
     </header>
     <main>
       <section id="montain">
         <div id="montain_title">
           <h1>Pioneiros Júniores<br>no Marketing</h1>
           <h2>Soluções de Marketing Estratégico</h2>
-          <div class="call-action">
-            </div>
+          <button class="call-action" id="myBtn1">Contacte- nos</button>
         </div>
       </section>
       <section id="quem_somos">
@@ -72,15 +86,15 @@
         </div>
       </section>
       <section id="slider-container">
-        <div class="slider">
-          <img src=logos/1.png>
-          <img src=logos/2.png>
-          <img src=logos/3.png>
-          <img src=logos/4.png>
-          <img src=logos/5.jpg>
-          <img src=logos/6.png>
-          <img src=logos/7.png>
-        </div>
+          <div class="c-my-flooper js-flooper">
+            <img class="c-my-flooper__el js-flooper-item" src=logos/1.png>
+            <img class="c-my-flooper__el js-flooper-item" src=logos/2.png>
+            <img class="c-my-flooper__el js-flooper-item" src=logos/3.png>
+            <img class="c-my-flooper__el js-flooper-item" src=logos/4.png>
+            <img class="c-my-flooper__el js-flooper-item" src=logos/5.jpg>
+            <img class="c-my-flooper__el js-flooper-item" src=logos/6.png>
+            <img class="c-my-flooper__el js-flooper-item" src=logos/7.png>
+          </div>
       </section>
     </main>
     <footer>
@@ -110,18 +124,31 @@
         </div>
       </div>
     </footer>
-    <script>    
-      $(document).ready(function(){
-        $('.slider').slick({
-          infinite: true,
-          slidesToShow: 5,
-          slidesToScroll: 3,
-          autoplay: true,
-          autoplaySpeed: 3000,
-          prevArrow: false,
-          nextArrow: false
-        });
-      });
-    </script>
   </body>
 </html>
+
+<script>
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var btn1 = document.getElementById("myBtn1");
+    var span = document.getElementsByClassName("close")[0];
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    btn1.onclick = function() {
+      modal.style.display = "block";
+    }
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    let myFlooper = new flooper('.js-flooper', {
+      speed: 0.5,
+    });
+    myFlooper.init();
+  </script>

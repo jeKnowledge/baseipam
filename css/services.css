@@ -5,19 +5,23 @@
     font-family: "Open Sans";
 }
 
-#slogan_table {
+#slogan-table {
     display: flex;
     flex-direction: column;
     padding: 100px 0 0 50px;
 }
 
-#slogan_table h1 {
+#slogan-table h1 {
     font-size: 3rem;
 }
 
-#slogan_table h2 {
+#slogan-table h2 {
     font-size: 1.5rem;
     font-weight: lighter;
+}
+
+#slogan-table button:focus {
+    outline: none;
 }
 
 #apresentation_table img {
