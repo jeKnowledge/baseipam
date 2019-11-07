@@ -35,14 +35,12 @@
 
 .service_box_serv {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    width: 70%;
+    width: 80%;
     margin-top: 60px;
 }
 
 .service_box_serv img {
-    width: 200px;
+    width: 150px;
 }
 
 .service_title {
@@ -52,6 +50,7 @@
 
 .service_description {
     padding: 10px;
+    width: 50%
 }
 
 #points_serv img {

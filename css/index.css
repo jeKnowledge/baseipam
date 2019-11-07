@@ -54,6 +54,7 @@ body {
     border-radius: 100px;
     margin-top: 20px;
     background-color: var(--red-color);
+    text-align: center;
 }
 
 #quem_somos {
@@ -86,12 +87,69 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 30px;
 }
 
-.service_box p {
-    padding-top: 20px;
+.box1{
+    border-radius: 80px;
+    width: 250px;
+    height: 250px;
+    background-color: var(--red-color);
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transition: -webkit-transform 1s; /* Safari */
+    transition: transform 1s;
+}
+
+.box1:hover{
+    -webkit-transform: rotate(-10deg); /* Safari */
+    transform: rotate(-10deg);
+}
+
+.box1:hover + .box2 {
+    -webkit-transform: rotate(360deg); /* Safari */
+    transform: rotate(360deg);
+}
+
+.box1 img{
+    width: 150px;
+}
+    
+.box2{
+    border-radius: 60px;
+    width: 250px;
+    height: 250px;
+    background-color: var(--red-color);
+    opacity: 40%;
+    position: absolute;
+    z-index: 1;
+    transform: rotate(350deg);
+    -webkit-transition: -webkit-transform 1s; /* Safari */
+    transition: transform 1s;
+}
+
+
+.box3{
+    border-radius: 60px;
+    width: 250px;
+    height: 250px;
+    background-color: var(--red-color);
+    opacity: 20%;
+    position: absolute;
+    z-index: 2;
+    transform: rotate(100deg);
+    webkit-transition: -webkit-transform 1s; /* Safari */
+    transition: transform 1s;
+}
+
+.service_title {
+    margin-top: 300px;
     font-size: 1.2rem;
     color: var(--grey-color);
+    z-index: 10;
 }
 
 #work-process {

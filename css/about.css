@@ -95,6 +95,7 @@
     -ms- transform: skewY(-5deg);
     -webkitß- transform: skewY(-5deg);
 }
+
 #tablet img{
     width: 50%;
     margin-right: -100px;
@@ -104,8 +105,8 @@
     -webkitß- transform: skewY(5deg);
 }
 
-#slogan-tablet{    
-    margin: 200px 0 0 50px;
+#slogan-text {    
+    padding: 100px 0 0 50px;
     font-family: "Open Sans";
     color: black;
     transform: skewY(5deg);
@@ -113,7 +114,11 @@
     -webkitß- transform: skewY(-5deg);
 }
 
-#slogan-tablet p{
+#slogan-text h1{
+    font-size: 3rem;
+}
+
+#slogan-text p{
     margin: 20px auto;
     font-size: 1rem;
 }
