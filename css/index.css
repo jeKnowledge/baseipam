@@ -10,6 +10,7 @@ body {
 
 * {
     margin: 0;
+    font-size: 16px;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -131,6 +132,7 @@ body {
     margin: 0 auto 10px;
     border-radius: 50%;
     background-color: white;
+    cursor: pointer;
 }
 
 .progress-bar #step1::before {
@@ -165,28 +167,26 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 200px;
+    margin: 200px auto 0;
 }
 
-.slider {
-    width: 70vw;
-    overflow: hidden;
-}
-
-.slider img {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-}
-
-.slider img:hover {
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%);
-}
-
-.slick-initialized .slick-track {
+.c-my-flooper {
+    position: relative;
     display: flex;
-    align-items: center;
-}
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+  
+  .c-my-flooper__el {
+    width: 11rem;
+    height: auto;
+    filter: grayscale(100%);
+    margin: 0 2.5rem;
+  }
+
+  .c-my-flooper__el:hover {
+    filter: grayscale(0%);
+  }
 
 @media screen and (max-width: 1060px) {
     #montain_title {

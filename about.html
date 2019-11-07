@@ -8,23 +8,37 @@
 <title>Sobre</title>
 </head>
 <body>
-  <header>
-    <a href=index.html>
-      <img src="img/logo.svg">
-    </a>
-    <nav>
-      <a href="about.html">Sobre</a>
-      <a href="services.html">Serviços</a>
-      <a class="navigation_element" href="">Contactos </a>
-    </nav>
-  </header>
+    <header>
+      <a href=index.html>
+        <img src="img/logo.svg">
+      </a>
+      <nav>
+        <a href="about.html">Sobre</a>
+        <a href="services.html">Serviços</a>
+        <button class="navigation_element" id="myBtn">Contactos</button>
+      </nav>
+      <div id="myModal" class="modal">
+        <form>
+          <span class="close">&times;</span>
+          <label for="name">Nome</label>
+          <input type="text" name="name">
+          <label for="email">Email</label>
+          <input type="email" name="email">
+          <label for="company">Empresa</label>
+          <input type="text" name="company">
+          <label for="subject">Assunto</label>
+          <textarea></textarea>
+          <input type="submit" value="Enviar">
+        </form>
+      </div>
+    </header>
   <main>
     <div id="apresentation_about">
       <img src="img/book.png">
       <div class="slogan">
         <h1> We Rise By Lifting Others </h1>
         <h2> Consultora Júnior de Marketing </h2>
-        <div class="call-action_right"> </div>
+        <button class="call-action" id="myBtn1">Contacte-nos</button>
       </div>
     </div>
     <div id="about_us">
@@ -83,3 +97,24 @@
   </footer>
 </body>
 </html>
+
+<script>
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var btn1 = document.getElementById("myBtn1");
+    var span = document.getElementsByClassName("close")[0];
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    btn1.onclick = function() {
+      modal.style.display = "block";
+    }
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
