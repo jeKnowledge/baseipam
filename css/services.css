@@ -1,14 +1,18 @@
-#apresentation_table {
+/* ------------------HERO------------------ */
+#apresentation-table {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
-    font-family: "Open Sans";
+}
+
+#apresentation-table img {
+    width: 37rem;
+    height: auto;
+    transform: rotate(5deg);
 }
 
 #slogan-table {
-    display: flex;
-    flex-direction: column;
-    padding: 100px 0 0 50px;
+    padding: 6rem 0 0 3rem;
 }
 
 #slogan-table h1 {
@@ -16,6 +20,7 @@
 }
 
 #slogan-table h2 {
+    margin-top: 1rem;
     font-size: 1.5rem;
     font-weight: lighter;
 }
@@ -24,87 +29,157 @@
     outline: none;
 }
 
-#apresentation_table img {
-    width: 600px;
-    transform: rotate(5deg);
-    padding: 10px;
-}
-
-#services_serv {
+/* ------------------SERVICES------------------ */
+#services-col {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 50px;
+    padding-left: 9rem;
+    background-image: url(../img/serv_background.png);
+    background-size: cover;
 }
 
-.service_box_serv {
-    display: flex;
-    width: 80%;
-    margin-top: 60px;
+.service-box {
+    flex-direction: row;
+    margin-top: 8rem;
 }
 
-.service_box_serv img {
-    width: 150px;
+.service-box:first-child {
+    margin-top: 10rem;
 }
 
-.service_title {
+.square {
+    margin: 0 3rem 0 0;
+}
+
+.service-title {
     color: var(--grey-color);
-    padding: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.service_description {
-    padding: 10px;
-    width: 50%
+.service-description {
+    width: 35rem;
 }
 
-#points_serv img {
-    width: 700px;
-    float: right;
-    margin-right: -800px;
+/* ------------------SIDE-SERVICES------------------ */
+.add-services-container {
+    display: flex;
+    width: 100vw;
+    height: 85vh;
+    justify-content: flex-end;
 }
 
-#portefolio {
+.big-square {
+    position: relative;
+    width: 40rem;
+    height: 40rem;
+}
+
+.big-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5rem;
+    padding: 5rem;
+}
+
+.big-box1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 4;
+    background-color: var(--white-color);
+    transform: rotate(-5deg);
+}
+
+.big-box2 {
+    z-index: 3;
+    background-color: #F8E5E5;
+    transform: rotate(-10deg);
+}
+
+.big-box3 {
+    z-index: 2;
+    background-color:#E08A8A;
+    transform: rotate(-15deg);
+}
+
+.big-box4 {
+    z-index: 1;
+    background-color: #D14D4C;
+    transform: rotate(-20deg);
+}
+
+.big-box .service-box {
+    flex-direction: row;
+    margin-top: 0rem;
+}
+
+.big-box .service-box:first-child {
+    margin-top: 0rem;
+}
+
+.big-box .square {
+    width: 5rem;
+    height: 5rem;
+    margin: 0 1rem 0 0;
+}
+
+.big-box .box {
+    border-radius: 0.5rem;
+}
+
+.big-box .box1 {
+    border-radius: 1rem;
+}
+
+.big-box .box1 img {
+    width: 2.5rem;
+}
+
+/* ------------------PORTFOLIO------------------ */
+#portfolio {
     display: flex;
     flex-direction: column;
     background-image: url(../img/serv_background.png);
     background-size: cover;
-    height: 110vh;
+    height: 130vh;
 }
 
-#portefolio h2 {
-    margin: 100px 0 0 100px;
+#portfolio h2 {
+    text-align: start;
+    margin: 6rem 0 0 6rem;
 }
 
-#portefolio #filters {
-    margin: 50px 0 50px 100px;
+#portfolio #filters {
+    margin: 3rem 0 3rem 6rem;
 }
 
-#portefolio #filters .btn {
+#portfolio #filters .btn {
     padding: 0.5rem;
-    margin: 0 0.5rem;
+    margin: 0 0.25rem;
     border: 1px solid #d3d3d3;
     border-radius: 0.25rem;
     background-color: white;
     cursor: pointer;
 }
 
-#portefolio #filters .btn:hover {
+#portfolio #filters .btn:hover {
     background-color: #d3d3d3;
 }
 
-#portefolio #filters .btn:focus {
+#portfolio #filters .btn:focus {
     outline: none;
 }
 
-#portefolio #filters .btn:first-child {
+#portfolio #filters .btn:first-child {
     margin-left: 0rem;
 }
 
 
-#portefolio #filters .btn:last-child {
+#portfolio #filters .btn:last-child {
     margin-right: 0rem;
 }
-
 
 .filterDiv {
     display: none;
@@ -127,32 +202,36 @@
     align-self: center;
 }
 
+footer {
+    margin-top: 0;
+}
+
 @media screen and (max-width: 1060px) {
-    #apresentation_table img {
+    #apresentation-table img {
         width: 400px;
     }
 
-    #slogan_table h1 {
+    #slogan-table h1 {
         font-size: 2rem;
     }
 
-    #slogan_table h2 {
+    #slogan-table h2 {
         font-size: 1.5rem;
     }
 
-    #points_serv img {
+    #points-serv img {
         width: 550px;
         margin-right: -600px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    #apresentation_table img {
+    #apresentation-table img {
         width: 250px;
         padding: 10px;
     }
 
-    #slogan_table {
+    #slogan-table {
         padding: 50px 0 0 50px;
     }
 
@@ -161,20 +240,20 @@
         height: 40px;
     }
 
-    #slogan_table h1 {
+    #slogan-table h1 {
         font-size: 1.5rem;
     }
 
-    #slogan_table h2 {
+    #slogan-table h2 {
         font-size: 1rem;
     }
 
-    .service_description {
+    .service-description {
         font-size: 1rem;
         width: 100%;
     }
 
-    #points_serv img {
+    #points-serv img {
         width: 500px;
         margin-right: -550px;
     }

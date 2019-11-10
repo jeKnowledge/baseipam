@@ -1,12 +1,6 @@
-:root {
-    --grey-color: #636363;
-    --red-color: #D2232A;
-}
-
-#apresentation_about {
+#apresentation-about {
     display: flex;
     justify-content: center;
-    font-family: "Open Sans";
 }
 
 .slogan {
@@ -17,159 +11,142 @@
     align-items: flex-end;
 }
 
-.slogan h1{
+.slogan h1 {
     font-size: 2.5rem;
 }
 
-.slogan h2{
+.slogan h2 {
     font-size: 1.5rem;
     font-weight: lighter;    
 }
 
-.call-action_right {
-    background-color: var(--red-color);
-    width: 150px;
-    height: 60px;
-    border-radius: 100px;
-    margin-top: 20px;
-    float: right;
-}
-
-#apresentation_about img{
+#apresentation-about img {
     width: 55%;
     transform: rotate(-10deg);
 }
 
-#about_us{
+#about-us {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 6rem;
     background-image: linear-gradient(#D46A6A 5%, #D2232A 99%);
-    font-family: "Open Sans";
-    color: white;
     height: 400px;
     transform: skewY(-5deg);
-    -ms- transform: skewY(-5deg);
-    -webkitß- transform: skewY(-5deg);
+    -ms-transform: skewY(-5deg);
+    -webkit-transform: skewY(-5deg);
 }
 
-#about_us h2{
+#about-us h2 { 
     padding-top: 100px;
+    color: var(--white-color);
     transform: skewY(5deg);
-    -ms- transform: skewY(5deg);
-    -webkitß- transform: skewY(5deg);
+    -ms-transform: skewY(5deg);
+    -webkit-transform: skewY(5deg);
 }
 
-#about_us p{
-    text-align: center;
-    width:60%;
+#about-us p {
+    width: 60%;
+    color: var(--white-color);
     margin-top: 40px;
     transform: skewY(5deg);
-    -ms- transform: skewY(5deg);
-    -webkitß- transform: skewY(5deg);
+    -ms-transform: skewY(5deg);
+    -webkit-transform: skewY(5deg);
 }
 
-.goals-section{
-  padding:150px 0 0 100px;
+.goals-section {
+  padding: 9rem 0 0 6rem;
 }
 
-.goals{
-  font-family: "Open Sans";
-  margin-top: 50px;
+.goals {
+  margin-top: 3rem;
 }
 
-.goals h1{
-  color: var(--red-color);
+.goals h1 {
+    color: var(--red-color);
 }
 
-.goals .{
-  color: var(--grey-color);
+.goals p {
+    margin-top: 0.5rem;
 }
 
 #tablet {
-    margin-top: 100px;
-    height: 1000px;
+    margin-top: 6rem;
+    height: 60rem;
     background-color: #e4e4e4;
     transform: skewY(-5deg);
-    -ms- transform: skewY(-5deg);
-    -webkitß- transform: skewY(-5deg);
+    -ms-transform: skewY(-5deg);
+    -webkit-transform: skewY(-5deg);
 }
 
 #tablet img{
     width: 50%;
-    margin-right: -100px;
+    margin-right: -6rem;
     float: right;
     transform: skewY(5deg);
-    -ms- transform: skewY(5deg);
-    -webkitß- transform: skewY(5deg);
+    -ms-transform: skewY(5deg);
+    -webkit-transform: skewY(5deg);
 }
 
 #slogan-text {    
-    padding: 100px 0 0 50px;
+    padding: 6rem 0 0 3rem;
     font-family: "Open Sans";
     color: black;
     transform: skewY(5deg);
-    -ms- transform: skewY(-5deg);
-    -webkitß- transform: skewY(-5deg);
+    -ms-transform: skewY(-5deg);
+    -webkit-transform: skewY(-5deg);
 }
 
-#slogan-text h1{
+#slogan-text h1 {
     font-size: 3rem;
 }
 
-#slogan-text p{
-    margin: 20px auto;
+#slogan-text p {
+    margin: 1.5rem auto;
     font-size: 1rem;
 }
 
 @media screen and (max-width: 1060px) {
-    #apresentation_about img{
-        width: 500px;
+    #apresentation-about img {
+        width: 31rem;
     }
     
-    .slogan{
-            margin: 80px 0 0 -150px;
+    .slogan {
+        margin: 5rem 0 0 -9rem;
     }
     
-    .slogan h1{
+    .slogan h1 {
         font-size: 2rem;
     }
 
-    .slogan h2{
+    .slogan h2 {
         font-size: 1rem;
         font-weight: lighter;    
     }
     
-    #about_us h2{
-        padding-top: 80px;
+    #about_us h2 {
+        padding-top: 5rem;
     }
     
-    .goals-section{
-        padding:100px 50px 0 50px;
+    .goals-section {
+        padding: 6rem 3rem 0;
     }
- 
 }
 
 @media screen and (max-width: 768px) {
-    #apresentation_about img{
-        width: 300px;
+    #apresentation-about img {
+        width: 18.5rem;
     }
-    .slogan{
-        margin: 50px 0 0 -150px;
+    .slogan {
+        margin: 3rem 0 0 -10rem;
     }
     
-    .slogan h1{
+    .slogan h1 {
         font-size: 1.5rem;
     }
-    
-    .call-action_right {
-    width: 100px;
-    height: 40px;
-    }
-    
-    .goals-section{
-    padding:100px 20px 0 20px;
+
+    .goals-section {
+    padding: 6rem 3rem 0;
     }
 
 }

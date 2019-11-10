@@ -20,7 +20,7 @@
       <nav>
         <a href="about.html">Sobre</a>
         <a href="services.html">Serviços</a>
-        <button class="navigation_element" id="myBtn">Contactos</button>
+        <button id="navCallAction">Contactos</button>
       </nav>
       <div id="myModal" class="modal">
         <form>
@@ -39,72 +39,82 @@
     </header>
     <main>
       <section id="montain">
-        <div id="montain_title">
+        <div id="montain-title">
           <h1>Pioneiros Júniores<br>no Marketing</h1>
           <h2>Soluções de Marketing Estratégico</h2>
-          <button class="call-action" id="myBtn1">Contacte- nos</button>
+          <button class="call-action" id="callAction">Contacte-nos</button>
         </div>
       </section>
-      <section id="quem_somos">
-        <h1 class="title_grey">Quem Somos?</h1>
-        <p class="subtitle_grey">Somos a única Júnior Empresa do país especializada em marketing, que trabalha com empresas que apostam no talento jovem e ambicionam o seu crescimento contínuo aliado à inovação e diferenciação.</p>
+      <section id="about">
+        <h1 class="title-grey">Quem Somos?</h1>
+        <p class="subtitle-grey">Somos a única Júnior Empresa do país especializada em marketing, que trabalha com empresas que apostam no talento jovem e ambicionam o seu crescimento contínuo aliado à inovação e diferenciação.</p>
       </section>
       <section id=services>  
-        <h1 class="title_grey">Serviços</h1>
-        <div id="service-gifs">
-         <div class="service_box">
-            <div class="box1"><img src="img/mark.png"></div>
-            <div class="box2"></div>
-            <div class="box3"></div>
-            <p class="service_title">Gestão Comercial</p>
-         </div>         
-          <div class="service_box">
-            <div class="box1"><img src="img/mark.png"></div>
-            <div class="box2"></div>
-            <div class="box3"></div>
-            <p class="service_title">Gestão de Marketing</p>
+        <h1 class="title-grey">Serviços</h1>
+        <div id="service-gifs">   
+          <div class="service-box">
+              <div class="square">
+                  <div class="box box1">
+                    <img src="img/mark.png">
+                  </div>
+                  <div class="box box2"></div>
+                  <div class="box box3"></div>
+               </div>
+            <p class="service-title">Gestão de Marketing</p>
          </div>           
-          <div class="service_box">
-            <div class="box1"><img src="img/comuni.png"></div>
-            <div class="box2"></div>
-            <div class="box3"></div>
-            <p class="service_title">Gestão de Comunicação</p>
+          <div class="service-box">
+              <div class="square">
+                  <div class="box box1">
+                    <img src="img/comuni.png">
+                  </div>
+                  <div class="box box2"></div>
+                  <div class="box box3"></div>
+               </div>
+            <p class="service-title">Gestão de Comunicação</p>
           </div>
-          <div class="service_box">
-            <div class="box1"><img src="img/study.png"></div> 
-            <div class="box2"></div>
-            <div class="box3"></div>
-            <p class="service_title"> Estudos de Mercado</p>
+          <div class="service-box">
+              <div class="square">
+                  <div class="box box1">
+                    <img src="img/study.png">
+                  </div>
+                  <div class="box box2"></div>
+                  <div class="box box3"></div>
+               </div>
+            <p class="service-title">Estudos de Mercado</p>
           </div>
+          <div class="service-box">
+              <div class="square">
+                 <div class="box box1">
+                   <img src="img/hand.png">
+                 </div>
+                 <div class="box box2"></div>
+                 <div class="box box3"></div>
+              </div>
+               <p class="service-title">Gestão Comercial</p>
+            </div>      
         </div>
       </section>
       <section id="work-process">
-        <h1 class="title_grey">Processo de trabalho</h1>
-        <div class="container">
-            <ul class="progress-bar">
-              <button onClick=next() id="step1"> Diagnóstico </button>
-              <button onClick=next() id="step2"> Planeamento Estratégico </button>
-              <button onClick=next() id="step3"> Entrega </button>
-            </ul>
-          </div>
-        <div class="subtitle_grey" >
-          <p id="prog_desc"> Análise da situação atual da empresa e identificação das suas necessidades. </p>
-        </div>
+        <h1 class="title-grey">Processo de trabalho</h1>
+        <ul class="progress-bar">
+          <button onClick=next() id="step1"> Diagnóstico </button>
+          <button onClick=next() id="step2"> Planeamento Estratégico </button>
+          <button onClick=next() id="step3"> Entrega </button>
+        </ul>
+        <p id="progressDescription" class="subtitle-grey"> Análise da situação atual da empresa e identificação das suas necessidades.</p>
       </section>
       <section id="slider-container">
           <div class="c-my-flooper js-flooper">
-            <img class="c-my-flooper__el js-flooper-item" src=logos/1.png>
-            <img class="c-my-flooper__el js-flooper-item" src=logos/2.png>
-            <img class="c-my-flooper__el js-flooper-item" src=logos/3.png>
-            <img class="c-my-flooper__el js-flooper-item" src=logos/4.png>
-            <img class="c-my-flooper__el js-flooper-item" src=logos/5.jpg>
-            <img class="c-my-flooper__el js-flooper-item" src=logos/6.png>
-            <img class="c-my-flooper__el js-flooper-item" src=logos/7.png>
+            <img class="c-my-flooper__el js-flooper-item" src=logos/aiesec.png>
+            <img class="c-my-flooper__el js-flooper-item" src=logos/ipam.png>
+            <img class="c-my-flooper__el js-flooper-item" src=logos/iuris.png>
+            <img class="c-my-flooper__el js-flooper-item" src=logos/je.jpg>
+            <img class="c-my-flooper__el js-flooper-item" src=logos/statista.png>
           </div>
       </section>
     </main>
     <footer>
-      <div class="footer_row">
+      <div class="footer-row">
        <img src="img/logo_footer.png">
         <div class="right-infor">
           <p>marketing@baseipam.pt</p>
@@ -112,7 +122,7 @@
         </div>
       </div>
       <hr>
-      <div class="footer_row">
+      <div class="footer-row">
         <div class="left-other">
           <span> 2019 Base IPAM</span>
           <span> Informação Legal <span>
@@ -132,27 +142,29 @@
     </footer>
   </body>
 </html>
-
 <script>
     var modal = document.getElementById("myModal");
-    var btn = document.getElementById("myBtn");
-    var btn1 = document.getElementById("myBtn1");
+    var btn = document.getElementById("navCallAction");
+    var btn1 = document.getElementById("callAction");
     var span = document.getElementsByClassName("close")[0];
     btn.onclick = function() {
-      modal.style.display = "block";
+      modal.style.display = "flex";
+      document.documentElement.style.overflowY = "hidden";
     }
     btn1.onclick = function() {
-      modal.style.display = "block";
+      modal.style.display = "flex";
+      document.documentElement.style.overflowY = "hidden";
     }
     span.onclick = function() {
       modal.style.display = "none";
+      document.documentElement.style.overflowY = "scroll";
     }
     window.onclick = function(event) {
       if (event.target == modal) {
         modal.style.display = "none";
+        document.documentElement.style.overflowY = "scroll";
       }
     }
-
     let myFlooper = new flooper('.js-flooper', {
       speed: 0.5,
     });

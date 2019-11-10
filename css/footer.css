@@ -7,18 +7,18 @@ footer {
     background-color: #e4e4e4;
 }
 
-.footer_row:first-child {
+.footer-row:first-child {
     align-items: flex-start;
 }
 
-.footer_row {
+.footer-row {
     width: 85%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.footer_row img {
+.footer-row img {
     width: 12rem;
     height: auto;
 }
