@@ -55,7 +55,7 @@
 }
 
 .goals-section {
-  padding: 9rem 0 0 6rem;
+  padding-top: 9rem;
 }
 
 .goals {
@@ -66,45 +66,45 @@
     color: var(--red-color);
 }
 
-.goals p {
-    margin-top: 0.5rem;
-}
-
 #tablet {
     margin-top: 6rem;
-    height: 60rem;
-    background-color: #e4e4e4;
-    transform: skewY(-5deg);
-    -ms-transform: skewY(-5deg);
-    -webkit-transform: skewY(-5deg);
+    min-height: 120vh;
+    background-image: url(../img/serv_background.png);
+    background-size: cover;
 }
 
-#tablet img{
-    width: 50%;
-    margin-right: -6rem;
-    float: right;
-    transform: skewY(5deg);
-    -ms-transform: skewY(5deg);
-    -webkit-transform: skewY(5deg);
-}
-
-#slogan-text {    
+.slogan-text {    
     padding: 6rem 0 0 3rem;
-    font-family: "Open Sans";
-    color: black;
-    transform: skewY(5deg);
-    -ms-transform: skewY(-5deg);
-    -webkit-transform: skewY(-5deg);
 }
 
-#slogan-text h1 {
-    font-size: 3rem;
+.slogan-text h1, .slogan-text p {
+    padding-left: 0;
+    text-align: left;
 }
 
-#slogan-text p {
-    margin: 1.5rem auto;
-    font-size: 1rem;
+.slogan-text p {
+    width: 55vw;
+    padding-bottom: 2rem;
 }
+
+.testimony-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 3rem;
+}
+
+.testimony {
+    margin-bottom: 3rem;
+}
+
+.testimony iframe {
+    width: 400px;
+    height: 200px;
+    margin-bottom: 1rem;
+}
+
 
 @media screen and (max-width: 1060px) {
     #apresentation-about img {

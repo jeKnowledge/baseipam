@@ -203,10 +203,6 @@
     padding: 5px;
 }
 
-footer {
-    margin-top: 0;
-}
-
 @media screen and (max-width: 1060px) {
     #apresentation-table img {
         width: 400px;
