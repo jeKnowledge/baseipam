@@ -35,6 +35,10 @@ nav a:hover {
     color: var(--white-color);
 }
 
+.hidden{
+    display: none;
+}
+
 .modal {
     display: none;
     align-items: center;
@@ -206,13 +210,15 @@ label {
     }
 
     nav ul {
-        margin: 0;
-        padding: 0;
-        font-family: "SuisseIntl-Bold" ;";
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center
+        font-family: 'Open Sans', sans-serif;
         color:#1690C3;
         list-style: none;
-        margin: 10em auto;
         text-align: center;
+        padding: 50%;
     }
 
     nav ul.hidden {
@@ -227,9 +233,9 @@ label {
         text-decoration: none;
         color: white;
         font-size: 3em;
-        line-height: 1.5;
-        width: 100%;
         display: block;
+        text-align: end;
+        font-weight:bold;
     }
 
     nav ul a:hover {
@@ -241,7 +247,9 @@ label {
         width: 100%;
         height: 100%;
         display: block;
-        background-color: rgba(22, 144, 195, 0.9);
+        background-color: #D14D4C;
         position: absolute;
+        left: 0;
+        top:0;
     }
 }

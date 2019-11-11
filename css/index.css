@@ -28,6 +28,7 @@ body {
     color: var(--grey-color);
     font-weight: lighter;
 }
+
 /* ------------------HERO------------------ */
 #montain {
     background-image: url(../img/montain.png);
@@ -250,6 +251,7 @@ body {
          height: 200vh;
          padding: 100px;
     }
+    
     #service-gifs {
          flex-direction: column;
          align-content: center;
@@ -268,6 +270,11 @@ body {
     .box1 img{
          width: 5rem;    
     }
+    
+    #slider-container {
+        overflow-x: hidden;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -291,4 +298,35 @@ body {
     .service-title{
         font-size: 1.1rem;
     }
+    
+    .progress-bar {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+     
+    #montain-title {
+        padding:20px 0 0 20px;
+    }
+    
+    .progress-bar button {
+        font-size: 1.1rem; 
+    }
+    
+    #about {
+        width: 90%;
+    }
+    
+    #services {
+         padding: 50px;
+    }
+    
+    .service-title{
+        text-align: center
+    }
+
+    
+    
+
 }

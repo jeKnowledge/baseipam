@@ -2,22 +2,30 @@
 <html>
 
 <head>
-  <link href="css/nav.css" rel="stylesheet" type="text/css">
-  <link href="css/footer.css" rel="stylesheet" type="text/css">
-  <link href="css/index.css" rel="stylesheet" type="text/css">
-  <link href="css/services.css" rel="stylesheet" type="text/css">
+    <link href="css/nav.css" rel="stylesheet" type="text/css">
+    <link href="css/footer.css" rel="stylesheet" type="text/css">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link href="css/services.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="scss/style.scss" rel="stylesheet" type="text/css">
   <title>Serviços</title>
 </head>
-
 <body>
   <header>
     <a href=index.html>
       <img src="img/logo.svg">
     </a>
     <nav>
-      <a href="about.html">Sobre</a>
-      <a href="services.html">Serviços</a>
-      <button class="navigation-element" id="navCallAction">Contactos</button>
+        <a href="about.html">Sobre</a>
+        <a href="services.html">Serviços</a>
+        <button class="navigation-element" id="navCallAction">Contactos</button>
+        <div class="menu-section">
+            <div class="menu-toggle">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
+        </div>    
     </nav>
     <div id="myModal" class="modal">
       <form>
@@ -289,3 +297,11 @@
     }
   }
 </script>
+    
+<script>
+    $(".menu-toggle").on('click', function() {
+        $(this).toggleClass("on");
+        $('.menu-section').toggleClass("on");
+        $("nav ul").toggleClass('hidden');
+    });
+</script> 

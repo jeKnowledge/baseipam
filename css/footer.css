@@ -58,16 +58,16 @@ footer hr {
 }
 
 .right-other img {
-    width: 20px;
-    height: auto;
+    width: 2rem;
 }
 
 @media screen and (max-width: 768px) {
     .footer-row {
         width: 100%;
     }
-    .footer_row img {
-        width: 8rem;
+    
+    .footer-row img {
+        width: 10rem;
     }
     
     footer hr{
@@ -91,6 +91,27 @@ footer hr {
         width: 20px;
     }
 }
+
+@media screen and (max-width: 500px) {
+    footer{
+        padding: 0.5rem;
+    }
+    
+    .footer-row img {
+        width: 8rem; 
+        margin-bottom: 
+    }
+    
+    .right-infor p{
+        font-size:0.7rem;
+    }
+    
+    .right-other img {
+        width: 1rem;
+    }
+}
+
+
 
 
 
