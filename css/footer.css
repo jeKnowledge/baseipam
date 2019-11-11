@@ -26,6 +26,7 @@ footer {
 .right-infor {
     text-align: end;
     font-weight: 500;
+    margin-top: 1rem; 
 }
 
 .right-infor p:first-child {
@@ -62,8 +63,24 @@ footer hr {
 }
 
 @media screen and (max-width: 768px) {
+    .footer-row {
+        width: 100%;
+    }
     .footer_row img {
         width: 8rem;
+    }
+    
+    footer hr{
+        width: 100%;
+    }
+    
+    .right-infor{
+        margin-top: 3.5rem;
+    }
+    
+
+    .right-infor p{
+        font-size: 0.9rem; 
     }
     
     .left-other{

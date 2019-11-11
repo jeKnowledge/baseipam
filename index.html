@@ -5,7 +5,9 @@
     <link href="css/index.css" rel="stylesheet" type="text/css">
     <link href="css/nav.css" rel="stylesheet" type="text/css">
     <link href="css/footer.css" rel="stylesheet" type="text/css">
+    <link href="scss/style.scss" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/step-bar.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
@@ -21,6 +23,12 @@
         <a href="about.html">Sobre</a>
         <a href="services.html">Serviços</a>
         <button id="navCallAction">Contactos</button>
+        <div class="menu-section">
+            <div class="menu-toggle">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
       </nav>
       <div id="myModal" class="modal">
         <form>
@@ -85,7 +93,7 @@
           <div class="service-box">
               <div class="square">
                  <div class="box box1">
-                   <img src="img/hand.png">
+                    <img src="img/hand.png">
                  </div>
                  <div class="box box2"></div>
                  <div class="box box3"></div>
@@ -170,3 +178,10 @@
     });
     myFlooper.init();
   </script>
+<script>
+    $(".menu-toggle").on('click', function() {
+        $(this).toggleClass("on");
+        $('.menu-section').toggleClass("on");
+        $("nav ul").toggleClass('hidden');
+    });
+</script>        
