@@ -68,7 +68,7 @@ form {
 form input[type=text], form input[type=email] {
     align-self: flex-end;
     width: 100%;
-    height: 4rem;
+    height: 3.5rem;
     border: none;
     border-radius: .5rem;
     padding: 0 1rem;
@@ -112,7 +112,7 @@ form input[type=submit]:hover {
 
 form textarea {
     width: 100%;
-    height: 12rem;
+    height: 8rem;
     padding: 1rem;
     margin-bottom: 1.5rem;
     border: none;
@@ -213,9 +213,8 @@ label {
         display: flex;
         flex-direction: column;
         align-items: center;
-        align-content: center
-        font-family: 'Open Sans', sans-serif;
-        color:#1690C3;
+        align-content: center;
+        color: #1690C3;
         list-style: none;
         text-align: center;
         padding: 50%;
