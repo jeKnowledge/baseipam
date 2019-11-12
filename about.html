@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="css/index.css" rel="stylesheet" type="text/css">
-<link href="css/about.css" rel="stylesheet" type="text/css">
-<link href="css/nav.css" rel="stylesheet" type="text/css">
-<link href="css/footer.css" rel="stylesheet" type="text/css">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link href="css/about.css" rel="stylesheet" type="text/css">
+    <link href="css/nav.css" rel="stylesheet" type="text/css">
+    <link href="css/footer.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="scss/style.scss" rel="stylesheet" type="text/css">
 <title>Sobre</title>
 </head>
 <body>
@@ -15,7 +17,19 @@
       <nav>
         <a href="about.html">Sobre</a>
         <a href="services.html">Serviços</a>
-        <button class="navigation_element" id="navCallAction">Contactos</button>
+        <button id="navCallAction">Contactos</button>
+        <div class="menu-section">
+            <div class="menu-toggle">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
+          <ul role="navigation" class="hidden">
+            <li><a href="about.html">Sobre</a></li>
+            <li><a href="services.html">Serviços</a></li>
+            <li><a href=" ">Contactos</a></li>
+          </ul>
+        </div>    
       </nav>
       <div id="myModal" class="modal">
         <form>
@@ -131,7 +145,6 @@
   </footer>
 </body>
 </html>
-
 <script>
     var modal = document.getElementById("myModal");
     var btn = document.getElementById("navCallAction");
@@ -155,4 +168,11 @@
         document.documentElement.style.overflowY = "scroll";
       }
     }
-  </script>
+</script>
+<script>
+    $(".menu-toggle").on('click', function() {
+        $(this).toggleClass("on");
+        $('.menu-section').toggleClass("on");
+        $("nav ul").toggleClass('hidden');
+    });
+</script> 
