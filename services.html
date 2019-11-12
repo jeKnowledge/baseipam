@@ -18,15 +18,20 @@
     <nav>
         <a href="about.html">Sobre</a>
         <a href="services.html">Serviços</a>
-        <button class="navigation-element" id="navCallAction">Contactos</button>
+        <button id="navCallAction">Contactos</button>
         <div class="menu-section">
             <div class="menu-toggle">
                 <div class="one"></div>
                 <div class="two"></div>
                 <div class="three"></div>
             </div>
+          <ul role="navigation" class="hidden">
+            <li><a href="about.html">Sobre</a></li>
+            <li><a href="services.html">Serviços</a></li>
+            <li><a href=" ">Contactos</a></li>
+          </ul>
         </div>    
-    </nav>
+      </nav>
     <div id="myModal" class="modal">
       <form>
         <span class="close">&times;</span>
@@ -77,7 +82,7 @@
           <div class="box box2"></div>
           <div class="box box3"></div>
         </div>
-        <div>
+        <div class=service-infor>
           <h3 class="service-title"> Gestão de Comunicação</h3>
           <p class="service-description">
             Desenvolvemos as ferramentas necessárias para a comunicação das marcas, através do aumento da presença
@@ -94,7 +99,7 @@
           <div class="box box2"></div>
           <div class="box box3"></div>
         </div>
-        <div class="description">
+        <div class=service-infor>
           <h3 class="service-title">Estudos de Mercado</h3>
           <p class="service-description">
             Pesquisamos e estudamos o mercado, assim como os hábitos e preferências dos consumidores,
@@ -111,7 +116,7 @@
           <div class="box box2"></div>
           <div class="box box3"></div>
         </div>
-        <div>
+        <div class=service-infor>
           <h3 class="service-title">Gestão Comercial</h3>
           <p class="service-description">Indicamos o melhor software de gestão para a empresa, de forma a tornar-se mais
             eficiente e tomar decisões mais acertadas relativamente aos desafios encontrados nos mercados.</p>
@@ -272,7 +277,7 @@
     });
   }
 </script>
-
+    
 <script>
   var modal = document.getElementById("myModal");
   var btn = document.getElementById("navCallAction");

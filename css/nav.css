@@ -162,6 +162,12 @@ label {
     outline: none;
 }
 
+@media screen and (max-width: 1060) {
+    .hidden{
+        display: none;
+    }
+}
+
 
 @media screen and (max-width: 768px) {
     nav a, nav button {
@@ -216,8 +222,7 @@ label {
         align-content: center;
         color: #1690C3;
         list-style: none;
-        text-align: center;
-        padding: 50%;
+        margin-top: 10rem;
     }
 
     nav ul.hidden {
@@ -231,10 +236,10 @@ label {
         transition-duration: 0.5s;
         text-decoration: none;
         color: white;
-        font-size: 3em;
+        font-size: 3rem;
         display: block;
-        text-align: end;
         font-weight:bold;
+        padding: 2rem;
     }
 
     nav ul a:hover {
@@ -250,5 +255,16 @@ label {
         position: absolute;
         left: 0;
         top:0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    nav ul a{
+        margin-top: rem;
+        font-size: 2rem;
+    }
+    
+    nav ul{
+        margin-top: 5rem;
     }
 }
