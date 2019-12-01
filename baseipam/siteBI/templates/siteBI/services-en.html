@@ -1,0 +1,306 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="{% static 'css/index.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'css/nav.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'css/footer.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'scss/style.scss' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'css/services.css' %}" rel="stylesheet" type="text/css">
+  <title>Services</title>
+</head>
+<body>
+  <header>
+    <a href="home">
+      <img src="{% static 'img/logo.svg' %}">
+    </a>
+    <nav>
+      <a href="/pt/services">Change to Portuguese</a>
+      <a href="about">About</a>
+      <a href="services">Services</a>
+      <button id="navCallAction">Contacts</button>
+      <div class="menu-section">
+          <div class="menu-toggle">
+              <div class="one"></div>
+              <div class="two"></div>
+              <div class="three"></div>
+          </div>
+          <ul role="navigation" class="hidden">
+            <li><a href="about">About</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href=" ">Contacts</a></li>
+          </ul>
+      </div>
+    </nav>
+    <div id="myModal" class="modal">
+      <form>
+        <span class="close">&times;</span>
+        <label for="name">Name</label>
+        <input type="text" name="name">
+        <label for="email">Email</label>
+        <input type="email" name="email">
+        <label for="company">Company</label>
+        <input type="text" name="company">
+        <label for="subject">Subject</label>
+        <textarea></textarea>
+        <input type="submit" value="Send">
+      </form>
+    </div>
+  </header>
+  <main>
+    <section id="apresentation-table">
+      <img src="{% static 'img/table.png' %}">
+      <div id="slogan-table">
+        <h1> Develop your <br> marketing journey </h1>
+        <h2> Strategic marketing solutions </h2>
+        <button class="call-action" id="callAction">Talk to us</button>
+      </div>
+    </section>
+    <section id="services-col">
+      <div class="service-box">
+        <div class="square">
+          <div class="box box1">
+            <img src="{% static 'img/mark.png' %}">
+          </div>
+          <div class="box box2"></div>
+          <div class="box box3"></div>
+        </div>
+        <div>
+          <h3 class="service-title">{{mm.eng_content}}</h3>
+          <p class="service-description">
+            {{mm_desc.eng_content}}
+          </p>
+        </div>
+      </div>
+      <div class="service-box">
+        <div class="square">
+          <div class="box box1">
+            <img src="{% static 'img/comuni.png' %}">
+          </div>
+          <div class="box box2"></div>
+          <div class="box box3"></div>
+        </div>
+        <div class=service-infor>
+          <h3 class="service-title">{{cm.eng_content}}</h3>
+          <p class="service-description">
+            {{cm_desc.eng_content}}
+          </p>
+        </div>
+      </div>
+      <div class="service-box">
+        <div class="square">
+          <div class="box box1">
+            <img src="{% static 'img/study.png' %}">
+          </div>
+          <div class="box box2"></div>
+          <div class="box box3"></div>
+        </div>
+        <div class=service-infor>
+          <h3 class="service-title">{{mr.eng_content}}</h3>
+          <p class="service-description">
+            {{mr_desc.eng_content}}
+          </p>
+        </div>
+      </div>
+      <div class="service-box">
+        <div class="square">
+          <div class="box box1">
+            <img src="{% static 'img/hand.png' %}">
+          </div>
+          <div class="box box2"></div>
+          <div class="box box3"></div>
+        </div>
+        <div class=service-infor>
+          <h3 class="service-title">{{commerm.eng_content}}</h3>
+          <p class="service-description">{{commerm_desc.eng_content}}</p>
+        </div>
+      </div>
+      <div class="add-services-container">
+        <div class="big-square">
+          <div class="big-box big-box1">
+            <div class="service-box">
+              <div class="square">
+                <div class="box box1">
+                  <img src="{% static 'img/analysis.png' %}">
+                </div>
+                <div class="box box2"></div>
+                <div class="box box3"></div>
+              </div>
+              <div class="description">
+                <h3 class="service-title">{{sidecard_first.eng_content}}</h3>
+              </div>
+            </div>
+            <div class="service-box">
+              <div class="square">
+                  <div class="box box1">
+                    <img src="{% static 'img/email.png' %}">
+                  </div>
+                  <div class="box box2"></div>
+                  <div class="box box3"></div>
+               </div>
+                <div class="description">
+                  <h3 class="service-title">Email Marketing</h3>
+                </div>
+            </div>
+            <div class="service-box">
+              <div class="square">
+                  <div class="box box1">
+                    <img src="{% static 'img/ads.png' %}">
+                  </div>
+                  <div class="box box2"></div>
+                  <div class="box box3"></div>
+               </div>
+                <div class="description">
+                  <h3 class="service-title">Google Ads</h3>
+                </div>
+            </div>
+            <div class="service-box">
+              <div class="square">
+                  <div class="box box1">
+                    <img src="{% static 'img/socialmedia.png' %}">
+                  </div>
+                  <div class="box box2"></div>
+                  <div class="box box3"></div>
+               </div>
+                <div class="description">
+                  <h3 class="service-title">Social Media Ads</h3>
+                </div>
+            </div>
+          </div>
+          <div class="big-box big-box2"></div>
+          <div class="big-box big-box3"></div>
+          <div class="big-box big-box4"></div>
+        </div>
+      </div>
+    </section>
+    <section id="portfolio">
+      <h2 class="title-grey">Portfolio</h2>
+      <div id="filters">
+        <button class="btn active" onclick="filterSelection('all')">Todos</button>
+        <button class="btn" onclick="filterSelection('marketing')">Marketing Management</button>
+        <button class="btn" onclick="filterSelection('comunicacao')">Communication Management</button>
+        <button class="btn" onclick="filterSelection('estudos')">Market Research</button>
+        <button class="btn" onclick="filterSelection('comercial')">Commercial Management</button>
+        <button class="btn" onclick="filterSelection('outros')">Others</button>
+      </div>
+      <div class="container-logos">
+        <img class="filterDiv estudos" src="{% static 'logos/comuniti.jpg' %}"> <img class="filterDiv comunicacao"
+          src="{% static 'logos/handgaia.png' %}"> <img class="filterDiv comunicacao marketing" src="{% static 'logos/pontagrande.png' %}"> <img
+          class="filterDiv outros" src="{% static 'logos/challenje.png' %}"> <img class="filterDiv outros" src="{% static 'logos/comiccon.jpg' %}"> <img
+          class="filterDiv outros" src="{% static 'logos/cargonet.png' %}"> <img class="filterDiv comunicacao" src="{% static 'logos/diwia.png' %}"> <img
+          class="filterDiv marketing" src="{% static 'logos/tcc.jpg' %}"> <img class="filterDiv comunicacao" src="{% static 'logos/addhu.png' %}"> <img
+          class="filterDiv marketing" src="{% static 'logos/groundcontrol.png' %}"> <img class="filterDiv comunicacao"
+          src="{% static 'logos/vidaedu.png' %}"> <img class="filterDiv outros" src="{% static 'logos/ipam.png' %}"> <img class="filterDiv comunicacao"
+          src="{% static 'logos/udream.png' %}"> <img class="filterDiv outros" src="{% static 'logos/defineit.png' %}"> <img class="filterDiv outros"
+          src="{% static 'logos/beachparty.png' %}"> <img class="filterDiv comunicacao" src="{% static 'logos/keepitbio.jpeg' %}"> </div> </section>
+          </main> <footer>
+        <div class="footer-row">
+          <img src="{% static 'img/logo_footer.png' %}">
+          <div class="right-infor">
+            <p>marketing@baseipam.pt</p>
+            <p>R. Manuel Pinto de Azevedo 748<br>4100-320 Porto Portugal</p>
+          </div>
+        </div>
+        <hr>
+        <div class="footer-row">
+          <div class="left-other">
+            <span> 2019 Base IPAM</span>
+            <span> Legal Information <span>
+          </div>
+          <div class="right-other">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/baseipam/">
+              <img src="{% static 'logos/face.png' %}"> </a> <a target="_blank" rel="noopener noreferrer"
+                href="https://www.linkedin.com/company/baseipam/">
+              <img src="{% static 'logos/in.png' %}" href="about.html">
+            </a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/baseipam/">
+              <img src="{% static 'logos/insta.png' %}" href="about.html">
+            </a>
+          </div>
+        </div>
+        </footer>
+</body>
+
+</html>
+
+<script>
+  filterSelection("all")
+
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("filterDiv");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {
+        element.className += " " + arr2[i];
+      }
+    }
+  }
+
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("filters");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function () {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+</script>
+
+<script>
+  var modal = document.getElementById("myModal");
+  var btn = document.getElementById("navCallAction");
+  var btn1 = document.getElementById("callAction");
+  var span = document.getElementsByClassName("close")[0];
+  btn.onclick = function () {
+    modal.style.display = "flex";
+    document.documentElement.style.overflowY = "hidden";
+  }
+  btn1.onclick = function () {
+    modal.style.display = "flex";
+    document.documentElement.style.overflowY = "hidden";
+  }
+  span.onclick = function () {
+    modal.style.display = "none";
+    document.documentElement.style.overflowY = "scroll";
+  }
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      document.documentElement.style.overflowY = "scroll";
+    }
+  }
+</script>
+
+<script>
+    $(".menu-toggle").on('click', function() {
+        $(this).toggleClass("on");
+        $('.menu-section').toggleClass("on");
+        $("nav ul").toggleClass('hidden');
+    });
+</script>

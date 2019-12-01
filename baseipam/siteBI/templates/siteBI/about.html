@@ -1,22 +1,24 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="css/index.css" rel="stylesheet" type="text/css">
-    <link href="css/about.css" rel="stylesheet" type="text/css">
-    <link href="css/nav.css" rel="stylesheet" type="text/css">
-    <link href="css/footer.css" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/about.css' %}" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="scss/style.scss" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/index.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/nav.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/footer.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'scss/style.scss' %}" rel="stylesheet" type="text/css">
 <title>Sobre</title>
 </head>
 <body>
     <header>
-      <a href=index.html>
-        <img src="img/logo.svg">
+      <a href="home">
+        <img src="{% static 'img/logo.svg' %}">
       </a>
       <nav>
-        <a href="about.html">Sobre</a>
-        <a href="services.html">Serviços</a>
+        <a href="/en/about">Mudar para inglês</a>
+        <a href="about">Sobre</a>
+        <a href="services">Serviços</a>
         <button id="navCallAction">Contactos</button>
         <div class="menu-section">
             <div class="menu-toggle">
@@ -25,11 +27,11 @@
                 <div class="three"></div>
             </div>
           <ul role="navigation" class="hidden">
-            <li><a href="about.html">Sobre</a></li>
-            <li><a href="services.html">Serviços</a></li>
+            <li><a href="about">Sobre</a></li>
+            <li><a href="services">Serviços</a></li>
             <li><a href=" ">Contactos</a></li>
           </ul>
-        </div>    
+        </div>
       </nav>
       <div id="myModal" class="modal">
         <form>
@@ -48,7 +50,7 @@
     </header>
   <main>
     <div id="apresentation-about">
-      <img src="img/book.png">
+      <img src="{% static 'img/book.png' %}">
       <div class="slogan">
         <h1>We Rise By Lifting Others</h1>
         <h2>Consultora Júnior de Marketing</h2>
@@ -56,37 +58,33 @@
       </div>
     </div>
     <div id="about-us">
-        <h2 class="title-grey">Sobre nós</h2>   
+        <h2 class="title-grey">{{ about_us.pt_content }}</h2>
         <p class="subtitle-grey">
-          Somos uma consultora júnior de marketing que presta serviços de consultoria a PME's da zona norte com necessidades na área do marketing.
-          Diferenciamo-nos das outras consultoras praticando preços mais acessíveis, tendo um acompanhamento próximo de docentes especializados e por termos membros qualificados.
-        </p> 
+          {{ about_us_desc.pt_content }}
+        </p>
       </div>
     <div class="goals-section">
       <div class="goals">
-        <h1 class="title-grey">Missão</h1>
-        <p class="subtitle-grey">Formar e potenciar as competências dos nossos membros, através do contacto direto com o mundo empresarial</p>
+        <h1 class="title-grey">{{mission.pt_content}}</h1>
+        <p class="subtitle-grey">{{mission_desc.pt_content}}</p>
       </div>
       <div class="goals">
-        <h1 class="title-grey">Visão</h1>
-        <p class="subtitle-grey">Ser uma referência no mercado para o desenvolvimento dos melhores profissionais da era do marketing em Portugal</p>
+        <h1 class="title-grey">{{vision.pt_content}}</h1>
+        <p class="subtitle-grey">{{vision_desc.pt_content}}</p>
       </div>
       <div class="goals">
-        <h1 class="title-grey">Valores</h1>
-        <p class="subtitle-grey">Compromisso</p>
-        <p class="subtitle-grey">Desenvolvimento jovem</p>
-        <p class="subtitle-grey">Paixão pelo Marketing</p>
-        <p class="subtitle-grey">Relação de profissionalismo e proximidade</p>
-        <p class="subtitle-grey">Retribuição à comunidade</p>
+        <h1 class="title-grey">{{values.pt_content}}</h1>
+        {% for p in values_desc %}
+        <p class="subtitle-grey">{{p.pt_content}}</p>
+        {% endfor %}
       </div>
     </div>
     <section id="tablet">
       <div class="slogan-text">
-        <h1 class="title-grey">Testemunhos</h1>
+        <h1 class="title-grey">{{testimonials.pt_content}}</h1>
         <p class="subtitle-grey">
-          Trabalhamos diária e afincadamente para desenvolver as competências dos nossos colaboradores e esforçamo-nos 
-          para solucionar os problemas de marketing das empresas!<br>Para além de soluções criamos laços... Porque acima de tudo a Base faz-se de pessoas para pessoas!
-        </p> 
+          {{testimonials_first.pt_content}}<br>{{testimonials_second.pt_content}}
+        </p>
       </div>
       <div class="testimony-section">
         <div class="testimony">
@@ -118,7 +116,7 @@
   </main>
   <footer>
     <div class="footer-row">
-      <img src="img/logo_footer.png">
+      <img src="{% static 'img/logo_footer.png' %}">
       <div class="right-infor">
         <p>marketing@baseipam.pt</p>
         <p>R. Manuel Pinto de Azevedo 748<br>4100-320 Porto Portugal</p>
@@ -132,13 +130,13 @@
       </div>
       <div class="right-other">
         <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/baseipam/">
-          <img src=logos/face.png>
+          <img src="{% static 'logos/face.png' %}">
         </a>
         <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/baseipam/">
-          <img src=logos/in.png href="about.html">
+          <img src="{% static 'logos/in.png' %}" href="about.html">
         </a>
         <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/baseipam/">
-          <img src=logos/insta.png href="about.html">
+          <img src="{% static 'logos/insta.png' %}" href="about.html">
         </a>
       </div>
     </div>
@@ -175,4 +173,4 @@
         $('.menu-section').toggleClass("on");
         $("nav ul").toggleClass('hidden');
     });
-</script> 
+</script>

@@ -1,0 +1,195 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="{% static 'css/index.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'css/nav.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'css/footer.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'scss/style.scss' %}" rel="stylesheet" type="text/css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="{% static 'js/step-bar-en.js' %}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script src="https://unpkg.com/flooper"></script>
+  <title>Base IPAM</title>
+</head>
+  <body>
+    <header>
+      <a href="">
+        <img src="{% static 'img/logo.svg' %}">
+      </a>
+      <nav>
+        <a href="/pt">Change to Portuguese</a>
+        <a href="about">About</a>
+        <a href="services">Services</a>
+        <button id="navCallAction">Contacts</button>
+        <div class="menu-section">
+            <div class="menu-toggle">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
+            <ul role="navigation" class="hidden">
+              <li><a href="about">About</a></li>
+              <li><a href="services">Services</a></li>
+              <li><a href=" ">Contacts</a></li>
+            </ul>
+        </div>
+      </nav>
+      <div id="myModal" class="modal">
+        <form>
+          <span class="close">&times;</span>
+          <label for="name">Name</label>
+          <input type="text" name="name">
+          <label for="email">Email</label>
+          <input type="email" name="email">
+          <label for="company">Company</label>
+          <input type="text" name="company">
+          <label for="subject">Subject</label>
+          <textarea></textarea>
+          <input type="submit" value="Send">
+        </form>
+      </div>
+    </header>
+    <main>
+      <section id="montain">
+        <div id="montain-title">
+          <h1>Develop your<br>marketing journey</h1>
+          <h2>Strategic marketing solutions</h2>
+          <button class="call-action" id="callAction">Talk to us</button>
+        </div>
+      </section>
+      <section id="about">
+        <h1 class="title-grey">{{ who_are_we.eng_content }}</h1>
+        <p class="subtitle-grey">{{ who_are_we_desc.eng_content }}</p>
+      </section>
+      <section id=services>
+        <h1 class="title-grey">Services</h1>
+        <div id="service-gifs">
+          <div class="service-box">
+              <div class="square">
+                  <div class="box box1">
+                    <img src="{% static 'img/mark.png' %}">
+                  </div>
+                  <div class="box box2"></div>
+                  <div class="box box3"></div>
+               </div>
+            <p class="service-title">Marketing Management</p>
+         </div>
+          <div class="service-box">
+              <div class="square">
+                  <div class="box box1">
+                    <img src="{% static 'img/comuni.png' %}">
+                  </div>
+                  <div class="box box2"></div>
+                  <div class="box box3"></div>
+               </div>
+            <p class="service-title">Communication Management</p>
+          </div>
+          <div class="service-box">
+              <div class="square">
+                  <div class="box box1">
+                    <img src="{% static 'img/study.png' %}">
+                  </div>
+                  <div class="box box2"></div>
+                  <div class="box box3"></div>
+               </div>
+            <p class="service-title">Market Research</p>
+          </div>
+          <div class="service-box">
+              <div class="square">
+                 <div class="box box1">
+                    <img src="{% static 'img/hand.png' %}">
+                 </div>
+                 <div class="box box2"></div>
+                 <div class="box box3"></div>
+              </div>
+               <p class="service-title">Commercial Management</p>
+            </div>
+        </div>
+      </section>
+      <section id="work-process">
+        <h1 class="title-grey">Work Process</h1>
+        <ul class="progress-bar">
+          <button onClick=next() id="step1"> Diagnosis </button>
+          <button onClick=next() id="step2"> Strategic Planning </button>
+          <button onClick=next() id="step3"> Delivery </button>
+        </ul>
+        <p id="progressDescription" class="subtitle-grey"> Analysis of the current situation of the company and identification of its needs. </p>
+      </section>
+      <section id="slider-container">
+          <div class="c-my-flooper js-flooper">
+            <img class="c-my-flooper__el js-flooper-item" src="{% static 'logos/aiesec.png' %}">
+            <img class="c-my-flooper__el js-flooper-item" src="{% static 'logos/ipam.png' %}">
+            <img class="c-my-flooper__el js-flooper-item" src="{% static 'logos/iuris.png' %}">
+            <img class="c-my-flooper__el js-flooper-item" src="{% static 'logos/je.jpg' %}">
+            <img class="c-my-flooper__el js-flooper-item" src="{% static 'logos/statista.png' %}">
+          </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-row">
+       <img src="{% static 'img/logo_footer.png' %}">
+        <div class="right-infor">
+          <p>marketing@baseipam.pt</p>
+          <p>R. Manuel Pinto de Azevedo 748<br>4100-320 Porto Portugal</p>
+        </div>
+      </div>
+      <hr>
+      <div class="footer-row">
+        <div class="left-other">
+          <span> 2019 Base IPAM</span>
+          <span> Legal Information <span>
+        </div>
+        <div class="right-other">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/baseipam/">
+            <img src="{% static 'logos/face.png' %}">
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/baseipam/">
+            <img src="{% static 'logos/in.png' %}" href="about.html">
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/baseipam/">
+            <img src="{% static 'logos/insta.png' %}" href="about.html">
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+  <script>
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementById("navCallAction");
+      var btn1 = document.getElementById("callAction");
+      var span = document.getElementsByClassName("close")[0];
+      btn.onclick = function() {
+        modal.style.display = "flex";
+        document.documentElement.style.overflowY = "hidden";
+      }
+      btn1.onclick = function() {
+        modal.style.display = "flex";
+        document.documentElement.style.overflowY = "hidden";
+      }
+      span.onclick = function() {
+        modal.style.display = "none";
+        document.documentElement.style.overflowY = "scroll";
+      }
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+          document.documentElement.style.overflowY = "scroll";
+        }
+      }
+      let myFlooper = new flooper('.js-flooper', {
+        speed: 0.5,
+      });
+      myFlooper.init();
+    </script>
+  <script>
+      $(".menu-toggle").on('click', function() {
+          $(this).toggleClass("on");
+          $('.menu-section').toggleClass("on");
+          $("nav ul").toggleClass('hidden');
+      });
+  </script>

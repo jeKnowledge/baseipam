@@ -1,14 +1,15 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/index.css" rel="stylesheet" type="text/css">
-    <link href="css/nav.css" rel="stylesheet" type="text/css">
-    <link href="css/footer.css" rel="stylesheet" type="text/css">
-    <link href="scss/style.scss" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/index.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/nav.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/footer.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'scss/style.scss' %}" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/step-bar.js"></script>
+    <script type="text/javascript" src="{% static 'js/step-bar.js' %}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="https://unpkg.com/flooper"></script>
@@ -16,12 +17,13 @@
   </head>
   <body>
     <header>
-      <a href=index.html>
-        <img src="img/logo.svg">
+      <a href="">
+        <img src="{% static 'img/logo.svg' %}">
       </a>
       <nav>
-        <a href="about.html">Sobre</a>
-        <a href="services.html">Serviços</a>
+        <a href="/en">Mudar para inglês</a>
+        <a href="about">Sobre</a>
+        <a href="services">Serviços</a>
         <button id="navCallAction">Contactos</button>
         <div class="menu-section">
             <div class="menu-toggle">
@@ -30,11 +32,11 @@
                 <div class="three"></div>
             </div>
           <ul role="navigation" class="hidden">
-            <li><a href="about.html">Sobre</a></li>
-            <li><a href="services.html">Serviços</a></li>
+            <li><a href="about">Sobre</a></li>
+            <li><a href="services">Serviços</a></li>
             <li><a href=" ">Contactos</a></li>
           </ul>
-        </div>    
+        </div>
       </nav>
       <div id="myModal" class="modal">
         <form>
@@ -60,26 +62,26 @@
         </div>
       </section>
       <section id="about">
-        <h1 class="title-grey">Quem Somos?</h1>
-        <p class="subtitle-grey">Somos a única Júnior Empresa do país especializada em marketing, que trabalha com empresas que apostam no talento jovem e ambicionam o seu crescimento contínuo aliado à inovação e diferenciação.</p>
+        <h1 class="title-grey">{{ who_are_we.pt_content }}</h1>
+        <p class="subtitle-grey">{{ who_are_we_desc.pt_content }}</p>
       </section>
-      <section id=services>  
+      <section id=services>
         <h1 class="title-grey">Serviços</h1>
-        <div id="service-gifs">   
+        <div id="service-gifs">
           <div class="service-box">
               <div class="square">
                   <div class="box box1">
-                    <img src="img/mark.png">
+                    <img src="{% static 'img/mark.png' %}">
                   </div>
                   <div class="box box2"></div>
                   <div class="box box3"></div>
                </div>
             <p class="service-title">Gestão de Marketing</p>
-         </div>           
+         </div>
           <div class="service-box">
               <div class="square">
                   <div class="box box1">
-                    <img src="img/comuni.png">
+                    <img src="{% static 'img/comuni.png' %}">
                   </div>
                   <div class="box box2"></div>
                   <div class="box box3"></div>
@@ -89,7 +91,7 @@
           <div class="service-box">
               <div class="square">
                   <div class="box box1">
-                    <img src="img/study.png">
+                    <img src="{% static 'img/study.png' %}">
                   </div>
                   <div class="box box2"></div>
                   <div class="box box3"></div>
@@ -99,13 +101,13 @@
           <div class="service-box">
               <div class="square">
                  <div class="box box1">
-                    <img src="img/hand.png">
+                    <img src="{% static 'img/hand.png' %}">
                  </div>
                  <div class="box box2"></div>
                  <div class="box box3"></div>
               </div>
                <p class="service-title">Gestão Comercial</p>
-            </div>      
+            </div>
         </div>
       </section>
       <section id="work-process">
@@ -119,17 +121,17 @@
       </section>
       <section id="slider-container">
           <div class="c-my-flooper js-flooper">
-            <img class="c-my-flooper__el js-flooper-item" src=logos/aiesec.png>
-            <img class="c-my-flooper__el js-flooper-item" src=logos/ipam.png>
-            <img class="c-my-flooper__el js-flooper-item" src=logos/iuris.png>
-            <img class="c-my-flooper__el js-flooper-item" src=logos/je.jpg>
-            <img class="c-my-flooper__el js-flooper-item" src=logos/statista.png>
+            <img class="c-my-flooper__el js-flooper-item" src="{% static 'logos/aiesec.png' %}">
+            <img class="c-my-flooper__el js-flooper-item" src="{% static 'logos/ipam.png' %}">
+            <img class="c-my-flooper__el js-flooper-item" src="{% static 'logos/iuris.png' %}">
+            <img class="c-my-flooper__el js-flooper-item" src="{% static 'logos/je.jpg' %}">
+            <img class="c-my-flooper__el js-flooper-item" src="{% static 'logos/statista.png' %}">
           </div>
       </section>
     </main>
     <footer>
       <div class="footer-row">
-       <img src="img/logo_footer.png">
+       <img src="{% static 'img/logo_footer.png' %}">
         <div class="right-infor">
           <p>marketing@baseipam.pt</p>
           <p>R. Manuel Pinto de Azevedo 748<br>4100-320 Porto Portugal</p>
@@ -143,13 +145,13 @@
         </div>
         <div class="right-other">
           <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/baseipam/">
-            <img src=logos/face.png>
+            <img src="{% static 'logos/face.png' %}">
           </a>
           <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/baseipam/">
-            <img src=logos/in.png href="about.html">
+            <img src="{% static 'logos/in.png' %}" href="about.html">
           </a>
           <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/baseipam/">
-            <img src=logos/insta.png href="about.html">
+            <img src="{% static 'logos/insta.png' %}" href="about.html">
           </a>
         </div>
       </div>
@@ -190,4 +192,4 @@
         $('.menu-section').toggleClass("on");
         $("nav ul").toggleClass('hidden');
     });
-</script>        
+</script>
