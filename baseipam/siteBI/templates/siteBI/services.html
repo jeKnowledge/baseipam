@@ -1,37 +1,39 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
-
 <head>
-    <link href="css/nav.css" rel="stylesheet" type="text/css">
-    <link href="css/footer.css" rel="stylesheet" type="text/css">
-    <link href="css/index.css" rel="stylesheet" type="text/css">
-    <link href="css/services.css" rel="stylesheet" type="text/css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="scss/style.scss" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="{% static 'css/index.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'css/nav.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'css/footer.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'scss/style.scss' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'css/services.css' %}" rel="stylesheet" type="text/css">
+
   <title>Serviços</title>
 </head>
 <body>
   <header>
-    <a href=index.html>
-      <img src="img/logo.svg">
+    <a href="home">
+      <img src="{% static 'img/logo.svg' %}">
     </a>
     <nav>
-        <a href="about.html">Sobre</a>
-        <a href="services.html">Serviços</a>
-        <button id="navCallAction">Contactos</button>
-        <div class="menu-section">
-            <div class="menu-toggle">
-                <div class="one"></div>
-                <div class="two"></div>
-                <div class="three"></div>
-            </div>
-          <ul role="navigation" class="hidden">
-            <li><a href="about.html">Sobre</a></li>
-            <li><a href="services.html">Serviços</a></li>
-            <li><a href=" ">Contactos</a></li>
-          </ul>
-        </div>    
-      </nav>
+      <a href="/en/services">Mudar para inglês</a>
+      <a href="about">Sobre</a>
+      <a href="services">Serviços</a>
+      <button id="navCallAction">Contactos</button>
+      <div class="menu-section">
+          <div class="menu-toggle">
+              <div class="one"></div>
+              <div class="two"></div>
+              <div class="three"></div>
+          </div>
+        <ul role="navigation" class="hidden">
+          <li><a href="about">Sobre</a></li>
+          <li><a href="services">Serviços</a></li>
+          <li><a href=" ">Contactos</a></li>
+        </ul>
+      </div>
+    </nav>
     <div id="myModal" class="modal">
       <form>
         <span class="close">&times;</span>
@@ -49,7 +51,7 @@
   </header>
   <main>
     <section id="apresentation-table">
-      <img src="img/table.png">
+      <img src="{% static 'img/table.png' %}">
       <div id="slogan-table">
         <h1> Pioneiros Júniores <br> no Marketing </h1>
         <h2> Soluções de Marketing Estratégico </h2>
@@ -60,66 +62,59 @@
       <div class="service-box">
         <div class="square">
           <div class="box box1">
-            <img src="img/mark.png">
+            <img src="{% static 'img/mark.png' %}">
           </div>
           <div class="box box2"></div>
           <div class="box box3"></div>
         </div>
         <div>
-          <h3 class="service-title">Gestão de Marketing </h3>
+          <h3 class="service-title">{{mm.pt_content}}</h3>
           <p class="service-description">
-            Analisamos o portfólio de serviços e produtos da empresa, assim como as suas necessidades,
-            de maneira a desenvolver um plano tático e estratégico de marketing que permita à empresa evoluir no
-            mercado.
+            {{mm_desc.pt_content}}
           </p>
         </div>
       </div>
       <div class="service-box">
         <div class="square">
           <div class="box box1">
-            <img src="img/comuni.png">
+            <img src="{% static 'img/comuni.png' %}">
           </div>
           <div class="box box2"></div>
           <div class="box box3"></div>
         </div>
         <div class=service-infor>
-          <h3 class="service-title"> Gestão de Comunicação</h3>
+          <h3 class="service-title">{{cm.pt_content}}</h3>
           <p class="service-description">
-            Desenvolvemos as ferramentas necessárias para a comunicação das marcas, através do aumento da presença
-            online das mesmas e
-            da criação de guidelines de conteúdo, para que a empresa possa desenvolver uma identidade de marca sólida.
+            {{cm_desc.pt_content}}
           </p>
         </div>
       </div>
       <div class="service-box">
         <div class="square">
           <div class="box box1">
-            <img src="img/study.png">
+            <img src="{% static 'img/study.png' %}">
           </div>
           <div class="box box2"></div>
           <div class="box box3"></div>
         </div>
         <div class=service-infor>
-          <h3 class="service-title">Estudos de Mercado</h3>
+          <h3 class="service-title">{{mr.pt_content}}</h3>
           <p class="service-description">
-            Pesquisamos e estudamos o mercado, assim como os hábitos e preferências dos consumidores,
-            de forma a que a empresa defina as suas estratégias com base em informações chave do mercado e dos
-            consumidores.
+            {{mr_desc.pt_content}}
           </p>
         </div>
       </div>
       <div class="service-box">
         <div class="square">
           <div class="box box1">
-            <img src="img/hand.png">
+            <img src="{% static 'img/hand.png' %}">
           </div>
           <div class="box box2"></div>
           <div class="box box3"></div>
         </div>
         <div class=service-infor>
-          <h3 class="service-title">Gestão Comercial</h3>
-          <p class="service-description">Indicamos o melhor software de gestão para a empresa, de forma a tornar-se mais
-            eficiente e tomar decisões mais acertadas relativamente aos desafios encontrados nos mercados.</p>
+          <h3 class="service-title">{{commerm.pt_content}}</h3>
+          <p class="service-description">{{commerm_desc.pt_content}}</p>
         </div>
       </div>
       <div class="add-services-container">
@@ -128,19 +123,19 @@
             <div class="service-box">
               <div class="square">
                 <div class="box box1">
-                  <img src="img/analysis.png">
+                  <img src="{% static 'img/analysis.png' %}">
                 </div>
                 <div class="box box2"></div>
                 <div class="box box3"></div>
               </div>
               <div class="description">
-                <h3 class="service-title">Estudo do perfil do visitante</h3>
+                <h3 class="service-title">{{sidecard_first.pt_content}}</h3>
               </div>
             </div>
             <div class="service-box">
               <div class="square">
                   <div class="box box1">
-                    <img src="img/email.png">
+                    <img src="{% static 'img/email.png' %}">
                   </div>
                   <div class="box box2"></div>
                   <div class="box box3"></div>
@@ -152,7 +147,7 @@
             <div class="service-box">
               <div class="square">
                   <div class="box box1">
-                    <img src="img/ads.png">
+                    <img src="{% static 'img/ads.png' %}">
                   </div>
                   <div class="box box2"></div>
                   <div class="box box3"></div>
@@ -164,7 +159,7 @@
             <div class="service-box">
               <div class="square">
                   <div class="box box1">
-                    <img src="img/socialmedia.png">
+                    <img src="{% static 'img/socialmedia.png' %}">
                   </div>
                   <div class="box box2"></div>
                   <div class="box box3"></div>
@@ -191,18 +186,18 @@
         <button class="btn" onclick="filterSelection('outros')">Outros</button>
       </div>
       <div class="container-logos">
-        <img class="filterDiv estudos" src=logos/comuniti.jpg> <img class="filterDiv comunicacao"
-          src=logos/handgaia.png> <img class="filterDiv comunicacao marketing" src=logos/pontagrande.png> <img
-          class="filterDiv outros" src=logos/challenje.png> <img class="filterDiv outros" src=logos/comiccon.jpg> <img
-          class="filterDiv outros" src=logos/cargonet.png> <img class="filterDiv comunicacao" src=logos/diwia.png> <img
-          class="filterDiv marketing" src=logos/tcc.jpg> <img class="filterDiv comunicacao" src=logos/addhu.png> <img
-          class="filterDiv marketing" src=logos/groundcontrol.png> <img class="filterDiv comunicacao"
-          src=logos/vidaedu.png> <img class="filterDiv outros" src=logos/ipam.png> <img class="filterDiv comunicacao"
-          src=logos/udream.png> <img class="filterDiv outros" src=logos/defineit.png> <img class="filterDiv outros"
-          src=logos/beachparty.png> <img class="filterDiv comunicacao" src=logos/keepitbio.jpeg> </div> </section>
+        <img class="filterDiv estudos" src="{% static 'logos/comuniti.jpg' %}"> <img class="filterDiv comunicacao"
+          src="{% static 'logos/handgaia.png' %}"> <img class="filterDiv comunicacao marketing" src="{% static 'logos/pontagrande.png' %}"> <img
+          class="filterDiv outros" src="{% static 'logos/challenje.png' %}"> <img class="filterDiv outros" src="{% static 'logos/comiccon.jpg' %}"> <img
+          class="filterDiv outros" src="{% static 'logos/cargonet.png' %}"> <img class="filterDiv comunicacao" src="{% static 'logos/diwia.png' %}"> <img
+          class="filterDiv marketing" src="{% static 'logos/tcc.jpg' %}"> <img class="filterDiv comunicacao" src="{% static 'logos/addhu.png' %}"> <img
+          class="filterDiv marketing" src="{% static 'logos/groundcontrol.png' %}"> <img class="filterDiv comunicacao"
+          src="{% static 'logos/vidaedu.png' %}"> <img class="filterDiv outros" src="{% static 'logos/ipam.png' %}"> <img class="filterDiv comunicacao"
+          src="{% static 'logos/udream.png' %}"> <img class="filterDiv outros" src="{% static 'logos/defineit.png' %}"> <img class="filterDiv outros"
+          src="{% static 'logos/beachparty.png' %}"> <img class="filterDiv comunicacao" src="{% static 'logos/keepitbio.jpeg' %}"> </div> </section>
           </main> <footer>
         <div class="footer-row">
-          <img src="img/logo_footer.png">
+          <img src="{% static 'img/logo_footer.png' %}">
           <div class="right-infor">
             <p>marketing@baseipam.pt</p>
             <p>R. Manuel Pinto de Azevedo 748<br>4100-320 Porto Portugal</p>
@@ -216,12 +211,12 @@
           </div>
           <div class="right-other">
             <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/baseipam/">
-              <img src=logos/face.png> </a> <a target="_blank" rel="noopener noreferrer"
+              <img src="{% static 'logos/face.png' %}"> </a> <a target="_blank" rel="noopener noreferrer"
                 href="https://www.linkedin.com/company/baseipam/">
-              <img src=logos/in.png href="about.html">
+              <img src="{% static 'logos/in.png' %}" href="about.html">
             </a>
             <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/baseipam/">
-              <img src=logos/insta.png href="about.html">
+              <img src="{% static 'logos/insta.png' %}" href="about.html">
             </a>
           </div>
         </div>
@@ -277,7 +272,7 @@
     });
   }
 </script>
-    
+
 <script>
   var modal = document.getElementById("myModal");
   var btn = document.getElementById("navCallAction");
@@ -302,11 +297,11 @@
     }
   }
 </script>
-    
+
 <script>
     $(".menu-toggle").on('click', function() {
         $(this).toggleClass("on");
         $('.menu-section').toggleClass("on");
         $("nav ul").toggleClass('hidden');
     });
-</script> 
+</script>
