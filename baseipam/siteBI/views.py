@@ -1,5 +1,5 @@
 from django.utils.translation import ugettext as _
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Content
 
@@ -28,6 +28,8 @@ commerm_desc = content[24]
 sidecard_first = content[25]
 
 
+def noLanguage(request):
+    return redirect(r'pt/')
 
 def index(request, language):
     if (language == "pt"):
