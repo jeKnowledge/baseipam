@@ -232,6 +232,7 @@ body {
 .c-my-flooper {
     position: relative;
     display: flex;
+    align-items: flex-start;
     flex-wrap: nowrap;
     white-space: nowrap;
 }

@@ -162,15 +162,8 @@ label {
     outline: none;
 }
 
-@media screen and (max-width: 1060) {
-    .hidden{
-        display: none;
-    }
-}
-
-
 @media screen and (max-width: 768px) {
-    nav a, nav button {
+    nav a, nav button, .hidden {
         display: none;
     }
     
@@ -259,12 +252,17 @@ label {
 }
 
 @media screen and (max-width: 500px) {
-    nav ul a{
-        margin-top: rem;
+    nav ul a {
         font-size: 2rem;
     }
     
-    nav ul{
+    nav ul {
         margin-top: 5rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    nav ul {
+        display: none;
     }
 }
