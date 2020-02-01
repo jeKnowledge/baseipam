@@ -6,7 +6,6 @@ header {
 
 header img {
     width: 9rem;
-    height: auto;
 }
 
 nav a, nav button {
@@ -160,6 +159,17 @@ label {
 
 .call-action:focus {
     outline: none;
+}
+
+.language-button img {
+    width: 1.5rem;
+}
+
+.language-button:hover {
+    padding: 0rem;
+    border-radius: 0rem;
+    background-color: none;
+    color: none;
 }
 
 @media screen and (max-width: 768px) {
