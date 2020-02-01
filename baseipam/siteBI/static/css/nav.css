@@ -166,9 +166,8 @@ label {
 }
 
 .language-button:hover {
-    padding: 0rem;
     border-radius: 0rem;
-    background-color: none;
+    background-color: var(--white-color);
     color: none;
 }
 
