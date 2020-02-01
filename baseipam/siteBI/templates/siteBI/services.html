@@ -8,7 +8,6 @@
   <link href="{% static 'css/footer.css' %}" rel="stylesheet" type="text/css">
   <link href="{% static 'css/services.css' %}" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
   <title>Serviços</title>
 </head>
 <body>
@@ -17,7 +16,9 @@
       <img src="{% static 'img/logo.svg' %}">
     </a>
     <nav>
-      <a href="/en/services">Mudar para inglês</a>
+      <a href="/en/services">
+        <img src="{% static 'img/uk.png' %}">
+      </a>
       <a href="about">Sobre</a>
       <a href="services">Serviços</a>
       <button id="navCallAction">Contactos</button>
