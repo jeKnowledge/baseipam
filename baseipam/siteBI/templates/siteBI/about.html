@@ -1,55 +1,58 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{% static 'css/index.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'css/nav.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'css/about.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'css/footer.css' %}" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<title>Sobre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="{% static 'css/index.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'css/nav.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'css/footer.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'css/about.css' %}" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <title>Sobre</title>
 </head>
+
 <body>
-    <header>
-      <a href="home">
-        <img src="{% static 'img/logo.svg' %}">
+  <header>
+    <a href="home">
+      <img src="{% static 'img/logo.svg' %}">
+    </a>
+    <nav>
+      <a class="language-button" href="/en/about">
+        <img src="{% static 'img/uk.png' %}">
       </a>
-      <nav>
-        <a class="language-button" href="/en/about">
-          <img src="{% static 'img/uk.png' %}">
-        </a>
-        <a href="about">Sobre</a>
-        <a href="services">Serviços</a>
-        <button id="navCallAction">Contactos</button>
-        <div class="menu-section">
-            <div class="menu-toggle">
-                <div class="one"></div>
-                <div class="two"></div>
-                <div class="three"></div>
-            </div>
-          <ul role="navigation" class="hidden">
-            <li><a href="about">Sobre</a></li>
-            <li><a href="services">Serviços</a></li>
-            <li><a href=" ">Contactos</a></li>
-          </ul>
+      <a href="about">Sobre</a>
+      <a href="services">Serviços</a>
+      <button id="navCallAction">Contactos</button>
+      <div class="menu-section">
+        <div class="menu-toggle">
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
         </div>
-      </nav>
-      <div id="myModal" class="modal">
-        <form>
-          <span class="close">&times;</span>
-          <label for="name">Nome</label>
-          <input type="text" name="name">
-          <label for="email">Email</label>
-          <input type="email" name="email">
-          <label for="company">Empresa</label>
-          <input type="text" name="company">
-          <label for="subject">Assunto</label>
-          <textarea></textarea>
-          <input type="submit" value="Enviar">
-        </form>
+        <ul role="navigation" class="hidden">
+          <li><a href="about">Sobre</a></li>
+          <li><a href="services">Serviços</a></li>
+          <li><a href=" ">Contactos</a></li>
+        </ul>
       </div>
-    </header>
+    </nav>
+    <div id="myModal" class="modal">
+      <form>
+        <span class="close">&times;</span>
+        <label for="name">Nome</label>
+        <input type="text" name="name">
+        <label for="email">Email</label>
+        <input type="email" name="email">
+        <label for="company">Empresa</label>
+        <input type="text" name="company">
+        <label for="subject">Assunto</label>
+        <textarea></textarea>
+        <input type="submit" value="Enviar">
+      </form>
+    </div>
+  </header>
   <main>
     <div id="apresentation-about">
       <img src="{% static 'img/book.png' %}">
@@ -60,11 +63,11 @@
       </div>
     </div>
     <div id="about-us">
-        <h2 class="title-grey">{{ about_us.pt_content }}</h2>
-        <p class="subtitle-grey">
-          {{ about_us_desc.pt_content }}
-        </p>
-      </div>
+      <h2 class="title-grey">{{ about_us.pt_content }}</h2>
+      <p class="subtitle-grey">
+        {{ about_us_desc.pt_content }}
+      </p>
+    </div>
     <div class="goals-section">
       <div class="goals">
         <h1 class="title-grey">{{mission.pt_content}}</h1>
@@ -81,7 +84,7 @@
         {% endfor %}
       </div>
     </div>
- <!--    <section id="tablet">
+    <!--    <section id="tablet">
       <div class="slogan-text">
         <h1 class="title-grey">{{testimonials.pt_content}}</h1>
         <p class="subtitle-grey">
@@ -144,35 +147,36 @@
     </div>
   </footer>
 </body>
+
 </html>
 <script>
-    var modal = document.getElementById("myModal");
-    var btn = document.getElementById("navCallAction");
-    var btn1 = document.getElementById("callAction");
-    var span = document.getElementsByClassName("close")[0];
-    btn.onclick = function() {
-      modal.style.display = "flex";
-      document.documentElement.style.overflowY = "hidden";
-    }
-    btn1.onclick = function() {
-      modal.style.display = "flex";
-      document.documentElement.style.overflowY = "hidden";
-    }
-    span.onclick = function() {
+  var modal = document.getElementById("myModal");
+  var btn = document.getElementById("navCallAction");
+  var btn1 = document.getElementById("callAction");
+  var span = document.getElementsByClassName("close")[0];
+  btn.onclick = function () {
+    modal.style.display = "flex";
+    document.documentElement.style.overflowY = "hidden";
+  }
+  btn1.onclick = function () {
+    modal.style.display = "flex";
+    document.documentElement.style.overflowY = "hidden";
+  }
+  span.onclick = function () {
+    modal.style.display = "none";
+    document.documentElement.style.overflowY = "scroll";
+  }
+  window.onclick = function (event) {
+    if (event.target == modal) {
       modal.style.display = "none";
       document.documentElement.style.overflowY = "scroll";
     }
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-        document.documentElement.style.overflowY = "scroll";
-      }
-    }
+  }
 </script>
 <script>
-    $(".menu-toggle").on('click', function() {
-        $(this).toggleClass("on");
-        $('.menu-section').toggleClass("on");
-        $("nav ul").toggleClass('hidden');
-    });
+  $(".menu-toggle").on('click', function () {
+    $(this).toggleClass("on");
+    $('.menu-section').toggleClass("on");
+    $("nav ul").toggleClass('hidden');
+  });
 </script>

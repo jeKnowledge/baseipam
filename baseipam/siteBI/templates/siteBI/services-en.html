@@ -1,15 +1,18 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="{% static 'css/index.css' %}" rel="stylesheet" type="text/css">
   <link href="{% static 'css/nav.css' %}" rel="stylesheet" type="text/css">
   <link href="{% static 'css/footer.css' %}" rel="stylesheet" type="text/css">
   <link href="{% static 'css/services.css' %}" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <title>Services</title>
 </head>
+
 <body>
   <header>
     <a href="home">
@@ -23,16 +26,16 @@
       <a href="services">Services</a>
       <button id="navCallAction">Contacts</button>
       <div class="menu-section">
-          <div class="menu-toggle">
-              <div class="one"></div>
-              <div class="two"></div>
-              <div class="three"></div>
-          </div>
-          <ul role="navigation" class="hidden">
-            <li><a href="about">About</a></li>
-            <li><a href="services">Services</a></li>
-            <li><a href=" ">Contacts</a></li>
-          </ul>
+        <div class="menu-toggle">
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
+        </div>
+        <ul role="navigation" class="hidden">
+          <li><a href="about">About</a></li>
+          <li><a href="services">Services</a></li>
+          <li><a href=" ">Contacts</a></li>
+        </ul>
       </div>
     </nav>
     <div id="myModal" class="modal">
@@ -135,39 +138,39 @@
             </div>
             <div class="service-box">
               <div class="square">
-                  <div class="box box1">
-                    <img src="{% static 'img/email.png' %}">
-                  </div>
-                  <div class="box box2"></div>
-                  <div class="box box3"></div>
-               </div>
-                <div class="description">
-                  <h3 class="service-title">Email Marketing</h3>
+                <div class="box box1">
+                  <img src="{% static 'img/email.png' %}">
                 </div>
+                <div class="box box2"></div>
+                <div class="box box3"></div>
+              </div>
+              <div class="description">
+                <h3 class="service-title">Email Marketing</h3>
+              </div>
             </div>
             <div class="service-box">
               <div class="square">
-                  <div class="box box1">
-                    <img src="{% static 'img/sad.png' %}">
-                  </div>
-                  <div class="box box2"></div>
-                  <div class="box box3"></div>
-               </div>
-                <div class="description">
-                  <h3 class="service-title">Google Ads</h3>
+                <div class="box box1">
+                  <img src="{% static 'img/sad.png' %}">
                 </div>
+                <div class="box box2"></div>
+                <div class="box box3"></div>
+              </div>
+              <div class="description">
+                <h3 class="service-title">Google Ads</h3>
+              </div>
             </div>
             <div class="service-box">
               <div class="square">
-                  <div class="box box1">
-                    <img src="{% static 'img/socialmedia.png' %}">
-                  </div>
-                  <div class="box box2"></div>
-                  <div class="box box3"></div>
-               </div>
-                <div class="description">
-                  <h3 class="service-title">Social Media Ads</h3>
+                <div class="box box1">
+                  <img src="{% static 'img/socialmedia.png' %}">
                 </div>
+                <div class="box box2"></div>
+                <div class="box box3"></div>
+              </div>
+              <div class="description">
+                <h3 class="service-title">Social Media Ads</h3>
+              </div>
             </div>
           </div>
           <div class="big-box big-box2"></div>
@@ -188,40 +191,47 @@
       </div>
       <div class="container-logos">
         <img class="filterDiv estudos" src="{% static 'logos/comuniti.jpg' %}"> <img class="filterDiv comunicacao"
-          src="{% static 'logos/handgaia.png' %}"> <img class="filterDiv comunicacao marketing" src="{% static 'logos/pontagrande.png' %}"> <img
-          class="filterDiv outros" src="{% static 'logos/challenje.png' %}"> <img class="filterDiv outros" src="{% static 'logos/comiccon.jpg' %}"> <img
-          class="filterDiv outros" src="{% static 'logos/cargonet.png' %}"> <img class="filterDiv comunicacao" src="{% static 'logos/diwia.png' %}"> <img
-          class="filterDiv marketing" src="{% static 'logos/tcc.jpg' %}"> <img class="filterDiv comunicacao" src="{% static 'logos/addhu.png' %}"> <img
-          class="filterDiv marketing" src="{% static 'logos/groundcontrol.png' %}"> <img class="filterDiv comunicacao"
-          src="{% static 'logos/vidaedu.png' %}"> <img class="filterDiv outros" src="{% static 'logos/ipam.png' %}"> <img class="filterDiv comunicacao"
-          src="{% static 'logos/udream.png' %}"> <img class="filterDiv outros" src="{% static 'logos/defineit.png' %}"> <img class="filterDiv outros"
-          src="{% static 'logos/beachparty.png' %}"> <img class="filterDiv comunicacao" src="{% static 'logos/keepitbio.jpeg' %}"> </div> </section>
-          </main> <footer>
-        <div class="footer-row">
-          <img src="{% static 'img/logo_footer.png' %}">
-          <div class="right-infor">
-            <p>marketing@baseipam.pt</p>
-            <p>R. Manuel Pinto de Azevedo 748<br>4100-320 Porto Portugal</p>
-          </div>
-        </div>
-        <hr>
-        <div class="footer-row">
-          <div class="left-other">
-            <span> 2019 Base IPAM</span>
-            <span> Legal Information <span>
-          </div>
-          <div class="right-other">
-            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/baseipam/">
-              <img src="{% static 'logos/face.png' %}"> </a> <a target="_blank" rel="noopener noreferrer"
-                href="https://www.linkedin.com/company/baseipam/">
-              <img src="{% static 'logos/in.png' %}" href="about.html">
-            </a>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/baseipam/">
-              <img src="{% static 'logos/insta.png' %}" href="about.html">
-            </a>
-          </div>
-        </div>
-        </footer>
+          src="{% static 'logos/handgaia.png' %}"> <img class="filterDiv comunicacao marketing"
+          src="{% static 'logos/pontagrande.png' %}"> <img class="filterDiv outros"
+          src="{% static 'logos/challenje.png' %}"> <img class="filterDiv outros"
+          src="{% static 'logos/comiccon.jpg' %}"> <img class="filterDiv outros"
+          src="{% static 'logos/cargonet.png' %}"> <img class="filterDiv comunicacao"
+          src="{% static 'logos/diwia.png' %}"> <img class="filterDiv marketing" src="{% static 'logos/tcc.jpg' %}">
+        <img class="filterDiv comunicacao" src="{% static 'logos/addhu.png' %}"> <img class="filterDiv marketing"
+          src="{% static 'logos/groundcontrol.png' %}"> <img class="filterDiv comunicacao"
+          src="{% static 'logos/vidaedu.png' %}"> <img class="filterDiv outros" src="{% static 'logos/ipam.png' %}">
+        <img class="filterDiv comunicacao" src="{% static 'logos/udream.png' %}"> <img class="filterDiv outros"
+          src="{% static 'logos/defineit.png' %}"> <img class="filterDiv outros"
+          src="{% static 'logos/beachparty.png' %}"> <img class="filterDiv comunicacao"
+          src="{% static 'logos/keepitbio.jpeg' %}"> </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-row">
+      <img src="{% static 'img/logo_footer.png' %}">
+      <div class="right-infor">
+        <p>marketing@baseipam.pt</p>
+        <p>R. Manuel Pinto de Azevedo 748<br>4100-320 Porto Portugal</p>
+      </div>
+    </div>
+    <hr>
+    <div class="footer-row">
+      <div class="left-other">
+        <span> 2019 Base IPAM</span>
+        <span> Legal Information <span>
+      </div>
+      <div class="right-other">
+        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/baseipam/">
+          <img src="{% static 'logos/face.png' %}"> </a> <a target="_blank" rel="noopener noreferrer"
+          href="https://www.linkedin.com/company/baseipam/">
+          <img src="{% static 'logos/in.png' %}" href="about.html">
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/baseipam/">
+          <img src="{% static 'logos/insta.png' %}" href="about.html">
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
@@ -300,9 +310,9 @@
 </script>
 
 <script>
-    $(".menu-toggle").on('click', function() {
-        $(this).toggleClass("on");
-        $('.menu-section').toggleClass("on");
-        $("nav ul").toggleClass('hidden');
-    });
+  $(".menu-toggle").on('click', function () {
+    $(this).toggleClass("on");
+    $('.menu-section').toggleClass("on");
+    $("nav ul").toggleClass('hidden');
+  });
 </script>
