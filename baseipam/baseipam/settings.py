@@ -27,7 +27,7 @@ SECRET_KEY = '4ercx)j2!hh@enqjvpq=mwfh*t)sk)qyzqrl=k_#_mr7t)pz^0'
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'www.baseipam.pt'
+    'www.baseipam.pt', 'baseipam.pt'
 ]
 
 
