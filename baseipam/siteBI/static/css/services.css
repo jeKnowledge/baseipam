@@ -2,6 +2,7 @@
 #apresentation-table {
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
     justify-content: space-around;
 }
 
@@ -9,10 +10,6 @@
     width: 37rem;
     height: auto;
     transform: rotate(5deg);
-}
-
-#slogan-table {
-    padding: 6rem 0 0 3rem;
 }
 
 #slogan-table h1 {
@@ -48,7 +45,7 @@
 }
 
 .square {
-    margin: 0 3rem 0 0;
+    margin-right: 3rem;
 }
 
 .service-title {
@@ -65,14 +62,16 @@
 .add-services-container {
     display: flex;
     width: 100vw;
-    height: 85vh;
+    min-height: 130vh;
     justify-content: flex-end;
 }
 
 .big-square {
     position: relative;
-    width: 40rem;
-    height: 40rem;
+    width: 35rem;
+    height: 35rem;
+    margin-right: 10rem;
+    padding-top: 5rem;
 }
 
 .big-box {
@@ -89,25 +88,24 @@
     justify-content: space-around;
     z-index: 4;
     background-color: var(--white-color);
-    transform: rotate(-5deg);
 }
 
 .big-box2 {
     z-index: 3;
     background-color: #F8E5E5;
-    transform: rotate(-10deg);
+    transform: rotate(-5deg);
 }
 
 .big-box3 {
     z-index: 2;
     background-color:#E08A8A;
-    transform: rotate(-15deg);
+    transform: rotate(-10deg);
 }
 
 .big-box4 {
     z-index: 1;
     background-color: #D14D4C;
-    transform: rotate(-20deg);
+    transform: rotate(-15deg);
 }
 
 .big-box .service-box {
@@ -176,7 +174,6 @@
     margin-left: 0rem;
 }
 
-
 #portfolio #filters .btn:last-child {
     margin-right: 0rem;
 }
@@ -201,6 +198,11 @@
     justify-self: center;
     align-self: center;
     padding: 5px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 @media screen and (max-width: 2000px) {
@@ -222,37 +224,36 @@
     #slogan-table h2 {
         font-size: 1.5rem;
     }
-    
+
     #services-col {
         padding-left: 3rem;
     }
-    
+
     .service-description{
-        font-size: 1rem;
         width: 25rem;
     }
-    
+
     .big-square {
         width: 30rem;
         height: 30rem;
-    }   
-    
+    }
+
     .add-services-container {
         padding-top: 100px;
     }
-    
+
     #portfolio{
         padding: 150px 0 200px 0;
     }
-    
+
     #portfolio #filters{
         margin: 3rem 0 3rem 3rem;
     }
-    
+
     #portfolio #filters .btn {
         margin: 0.50rem 0.25rem;
     }
-    
+
     .container-logos img {
         width: 130px;
         padding: 20px;
@@ -281,41 +282,47 @@
     #services-col {
         padding-left: 1rem;
     }
-    
+
     .service-box {
         flex-direction: column;
-        align-items: center
+        align-items: center;
+        margin-top: 4rem;
     }
-    
+
+    .square {
+        margin-right: 0rem;
+        margin-bottom: 3rem;
+    }
+
     .service-description{
         width: 15rem;
     }
-    
+
     #portfolio{
         height: 200vh;
     }
-    
+
     .container-logos {
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: 1fr 1fr 1fr;
     }
-    
+
 }
 
 @media screen and (max-width: 500px) {
     #apresentation-table img{
         display: none
     }
-    
+
     #apresentation-table {
     display: flex;
     justify-content: flex-end;
-    }   
-    
+    }
+
     #slogan-table {
         padding: 5rem 0 0 2rem;
     }
-    
+
     #slogan-table h1 {
         font-size: 1.9rem;
     }
@@ -323,12 +330,12 @@
     #slogan-table h2 {
         font-size: 1.4rem;
     }
-    
+
     #portfolio{
         height: 300vh;
         margin-bottom: 20rem;
     }
-    
+
     .container-logos {
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 1fr 1fr 1fr;

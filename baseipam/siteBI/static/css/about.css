@@ -1,13 +1,15 @@
+/* ------------------HERO------------------ */
 #apresentation-about {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 1rem;
 }
 
 .slogan {
     display: flex;
     flex-direction: column;
     z-index: 1;
-    margin: 80px 0 0 -100px;
     align-items: flex-end;
 }
 
@@ -16,19 +18,22 @@
 }
 
 .slogan h2 {
+    margin-top: 0.5rem;
     font-size: 1.5rem;
-    font-weight: lighter;    
+    font-weight: lighter;
 }
 
 #apresentation-about img {
-    width: 55%;
+    width: 45%;
     transform: rotate(-10deg);
 }
 
+/* ------------------ABOUT------------------ */
 #about-us {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-top: 6rem;
     background-image: linear-gradient(#D46A6A 5%, #D2232A 99%);
     height: 400px;
@@ -38,7 +43,6 @@
 }
 
 #about-us h2 {
-    padding-top: 6rem;
     color: var(--white-color);
     transform: skewY(5deg);
     -ms-transform: skewY(5deg);
@@ -46,37 +50,40 @@
 }
 
 #about-us p {
-    width: 70%;
+    width: 50%;
     color: var(--white-color);
     transform: skewY(5deg);
     -ms-transform: skewY(5deg);
     -webkit-transform: skewY(5deg);
 }
 
+/* ------------------GOALS------------------ */
 .goals-section {
-  padding: 9rem 0;
+    padding: 6rem 0;
 }
 
 .goals {
-  margin-top: 3rem;
+    margin-top: 3rem;
 }
 
 .goals h1 {
     color: var(--red-color);
 }
 
+/* ------------------TESTIMONY------------------ */
 #tablet {
-    margin-top: 6rem;
+    margin-top: 4rem;
     min-height: 120vh;
     background-image: url(../img/serv_background.png);
     background-size: cover;
 }
 
-.slogan-text {    
+.slogan-text {
     padding: 6rem 0 0 3rem;
 }
 
-.slogan-text h1, .slogan-text p {
+.slogan-text h1,
+.slogan-text p {
     padding-left: 0;
     text-align: left;
 }
@@ -106,91 +113,49 @@
 
 
 @media screen and (max-width: 1060px) {
-    #apresentation-about img {
-        width: 31rem;
-    }
-    
-    .slogan {
-        margin: 5rem 0 0 -9rem;
-    }
-    
     .slogan h1 {
         font-size: 2rem;
     }
 
-    .slogan h2 {
-        font-size: 1rem;
-    }
-    
-    #about_us h2 {
-        padding-top: 5rem;
-    }
-    
     .goals-section {
-        padding: 6rem 3rem 0;
+        padding: 6rem 3rem;
     }
 }
 
 @media screen and (max-width: 768px) {
     #apresentation-about img {
-        width: 22.5rem;
+        display: none;
     }
-    
+
     .slogan {
-        margin: 4rem 0 0 -11rem;
+        padding-top: 2rem;
+        align-items: flex-start;
     }
-    
-    .slogan h1 {
-        font-size: 1.5rem;
-    }
-    
-    #about-us h2{
-        padding-top: 50px;
-    }
-    
-    #about-us p{
+
+    #about-us p {
         width: 80%;
     }
 
-    .goals-section {
-    padding: 6rem 3rem 0;
+    .slogan-text {
+        padding: 6rem 3rem 2rem;
     }
 
-}
-
-
-@media screen and (max-width: 500px) {
-    #apresentation-about img {
-        display: none;
-    }
-    
-    #apresentation-about {
-        justify-content: flex-end;
-    }
-    
-    .slogan {
-        margin: 1rem 1rem 0 0;
-    }
-    
-    .slogan h1 {
-        font-size: 1.4rem;
-    }
-    
-    .slogan h2 {
-        font-size: 1rem;
-    }
-    
-    #about-us {
-        margin-top: 12rem
-    }
-    
-    .testimony iframe {
-        width: 300px;
-        height: 100px;
-    }
-    
-    .testimony-section{
+    .slogan-text p {
+        width: 100%;
         padding: 0;
     }
-    
+
+    .testimony-section {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .testimony-section {
+        padding: 0 0.5rem;
+    }
+
+    .testimony iframe {
+        width: 300px;
+    }
 }

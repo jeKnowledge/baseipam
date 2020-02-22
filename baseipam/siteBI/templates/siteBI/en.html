@@ -43,7 +43,7 @@
       </div>
     </nav>
     <div id="myModal" class="modal">
-      <form>
+      <form action="https://formspree.io/mayjnllj" method="POST">
         <span class="close">&times;</span>
         <label for="name">Name</label>
         <input type="text" name="name">
@@ -52,7 +52,7 @@
         <label for="company">Company</label>
         <input type="text" name="company">
         <label for="subject">Subject</label>
-        <textarea></textarea>
+        <textarea name="subject"></textarea>
         <input type="submit" value="Send">
       </form>
     </div>
@@ -126,27 +126,27 @@
     </section>
     <section id="slider-container">
       <div class="c-my-flooper js-flooper">
-        <img class="c-my-flooper__el js-flooper-item" src="{% static 'logos/aiesec.png' %}">
-        <img class="c-my-flooper__el js-flooper-item" src="{% static 'logos/ipam.png' %}">
-        <img class="c-my-flooper__el js-flooper-item" src="{% static 'logos/iuris.png' %}">
-        <img class="c-my-flooper__el js-flooper-item" src="{% static 'logos/je.jpg' %}">
-        <img class="c-my-flooper__el js-flooper-item" src="{% static 'logos/statista.png' %}">
-      </div>
+        {%for logo in logos%}
+        {{MEDIA_URL}}
+        <img class="c-my-flooper__el js-flooper-item" src="{{logo.image.url}}">
+        {%endfor%}      </div>
     </section>
   </main>
   <footer>
     <div class="footer-row">
-      <img src="{% static 'img/logo_footer.png' %}">
+      <a href="home">
+        <img src="{% static 'img/logo_footer.png' %}">
+      </a>
       <div class="right-infor">
-        <p>marketing@baseipam.pt</p>
-        <p>R. Manuel Pinto de Azevedo 748<br>4100-320 Porto Portugal</p>
+        <a target="_blank" href="mailto:marketing@baseipam.pt">marketing@baseipam.pt</a>
+        <a target="_blank" href="https://www.google.com/maps/place/R.+Manuel+Pinto+de+Azevedo+748,+4100-320+Porto/@41.1755773,-8.6521089,17z/data=!3m1!4b1!4m5!3m4!1s0xd24658d4582a4d9:0x705167a1f38677c7!8m2!3d41.1755773!4d-8.6499202">R. Manuel Pinto de Azevedo 748<br>4100-320 Porto Portugal</a>
       </div>
     </div>
     <hr>
     <div class="footer-row">
       <div class="left-other">
         <span> 2019 Base IPAM</span>
-        <span> Legal Information <span>
+        <!-- <span> Legal Information <span> -->
       </div>
       <div class="right-other">
         <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/baseipam/">

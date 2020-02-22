@@ -24,10 +24,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '4ercx)j2!hh@enqjvpq=mwfh*t)sk)qyzqrl=k_#_mr7t)pz^0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    'www.baseipam.pt', 'baseipam.pt'
+    'www.baseipam.pt', 'baseipam.pt', '198.211.99.20', 'localhost', '127.0.0.1'
 ]
 
 
