@@ -191,7 +191,7 @@
 }
 
 .container-logos img {
-    width: 150px;
+    width: 9rem;
     height: auto;
     justify-self: center;
     align-self: center;
@@ -235,8 +235,12 @@
         height: 30rem;
     }
 
+    #portfolio h2 {
+        margin: 6rem 0 0 2rem;
+    }
+
     #portfolio #filters{
-        margin: 3rem 0 3rem 3rem;
+        margin: 0rem 0 3rem 3rem;
     }
 
     #portfolio #filters .btn {
@@ -244,7 +248,7 @@
     }
 
     .container-logos img {
-        width: 130px;
+        width: 7rem;
     }
 
 }
@@ -255,7 +259,7 @@
     }
 
     #slogan-table {
-        padding: 50px 0 0 50px;
+        padding: 3rem 0 0 3rem;
     }
 
     #slogan-table h1 {
@@ -294,7 +298,6 @@
 
     .container-logos {
         grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: 1fr 1fr 1fr;
     }
 }
 
@@ -330,7 +333,10 @@
 
     .container-logos {
         grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 1fr 1fr 1fr;
+    }
+
+    .container-logos img {
+        width: 5rem;
     }
 }
 

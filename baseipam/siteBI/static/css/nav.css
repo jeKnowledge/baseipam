@@ -175,13 +175,13 @@ label {
     nav a, nav button, .hidden {
         display: none;
     }
-    
+
     .menu-toggle {
-        width: 40px;
-        height: 30px;
+        width: 2rem;
+        height: 2rem;
         position: absolute;
-        top: 20px;
-        right: 25px;
+        top: 2rem;
+        right: 2rem;
         cursor: pointer;
     }
 
@@ -218,13 +218,14 @@ label {
     }
 
     nav ul {
+        height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
-        align-content: center;
-        color: #1690C3;
+        justify-content: center;
+        color: var(--red-color);
         list-style: none;
-        margin-top: 10rem;
+        padding: 0rem;
     }
 
     nav ul.hidden {
@@ -236,12 +237,11 @@ label {
         -o-transition-duration: 0.5s;
         -webkit-transition-duration: 0.5s;
         transition-duration: 0.5s;
-        text-decoration: none;
-        color: white;
-        font-size: 3rem;
+        color: var(--white-color);
+        font-size: 2rem;
         display: block;
         font-weight:bold;
-        padding: 2rem;
+        padding: 2rem 0rem;
     }
 
     nav ul a:hover {
@@ -254,19 +254,9 @@ label {
         height: 100%;
         display: block;
         background-color: #D14D4C;
-        position: absolute;
+        position: fixed;
         left: 0;
         top:0;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    nav ul a {
-        font-size: 2rem;
-    }
-    
-    nav ul {
-        margin-top: 5rem;
     }
 }
 

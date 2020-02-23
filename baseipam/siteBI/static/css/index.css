@@ -1,338 +1,331 @@
 /* ------------------GENERAL------------------ */
 * {
-    margin: 0;
-    font-size: 16px;
-    font-family: "Open Sans", sans-serif;
-  }
-  
-  :root {
-    --grey-color: #636363;
-    --red-color: #d22429;
-    --white-color: #ffffff;
-  }
-  
-  body {
+  margin: 0;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --grey-color: #636363;
+  --red-color: #d22429;
+  --white-color: #ffffff;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.title-grey {
+  color: var(--grey-color);
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.subtitle-grey {
+  text-align: center;
+  color: var(--grey-color);
+  font-weight: lighter;
+}
+
+/* ------------------HERO------------------ */
+#montain {
+  background-image: url(../img/montain.png);
+  background-size: cover;
+  height: 90vh;
+}
+
+#montain-title {
+  padding: 6rem 0 0 6rem;
+  color: black;
+}
+
+#montain-title h1 {
+  font-size: 2.5rem;
+}
+
+#montain-title h2 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+.call-action {
+  height: 3.5rem;
+}
+
+/* ------------------ABOUT------------------ */
+#about {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem auto 0rem;
+}
+
+#about h1 {
+  margin-bottom: 1rem;
+}
+
+/* ------------------SERVICES------------------ */
+#services {
+  min-height: 140vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(../img/index_background.png);
+  background-size: cover;
+}
+
+#services h1 {
+  margin: 2rem 0rem;
+}
+
+#service-gifs {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.service-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.square {
+  position: relative;
+  width: 12rem;
+  height: 12rem;
+  margin-bottom: 2rem;
+}
+
+.box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 3rem;
+  -webkit-transition: -webkit-transform 1s;
+  transition: transform 1s;
+}
+
+.box1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  border-radius: 4rem;
+  background-color: var(--red-color);
+}
+
+.box1 img {
+  width: 7rem;
+}
+
+.box2 {
+  z-index: 1;
+  background-color: rgb(210, 35, 42, 0.3);
+  transform: rotate(350deg);
+}
+
+.box3 {
+  z-index: 2;
+  background-color: rgb(210, 35, 42, 0.1);
+  transform: rotate(100deg);
+}
+
+.box1:hover {
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+
+.box1:hover + .box2 {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.service-title {
+  font-size: 1.3rem;
+  color: var(--grey-color);
+}
+
+/* ------------------PROGRESS-BAR------------------ */
+#work-process {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+
+.progress-bar {
+  width: 60%;
+  margin: 4rem auto;
+  padding: 0rem;
+}
+
+.progress-bar button {
+  width: 33.3%;
+  float: left;
+  position: relative;
+  padding: 0;
+  border: none;
+  color: var(--grey-color);
+  background-color: transparent;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.progress-bar button:focus {
+  outline: none;
+}
+
+.progress-bar button:before {
+  width: 2rem;
+  height: 2rem;
+  content: no-close-quote;
+  display: block;
+  margin: 0rem auto 0.5rem;
+  border: 0.25rem solid var(--grey-color);
+  border-radius: 50%;
+  text-align: center;
+  background-color: var(--white-color);
+  cursor: pointer;
+}
+
+.progress-bar #step1::before {
+  border: 0.25rem solid var(--red-color);
+}
+
+.progress-bar button:after {
+  top: 1rem;
+  left: -50%;
+  z-index: -1;
+  width: 100%;
+  height: 0.25rem;
+  content: "";
+  position: absolute;
+  background-color: var(--grey-color);
+  cursor: pointer;
+}
+
+.progress-bar button:first-child:after {
+  content: none;
+}
+
+.progress-bar button.active:before {
+  border-color: var(--red-color);
+}
+
+.progress-bar button.active:after {
+  background-color: var(--red-color);
+}
+
+/* ------------------SLIDER------------------ */
+#slider-container {
+  margin: 12rem auto 10rem;
+}
+
+.c-my-flooper {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.c-my-flooper__el {
+  width: 11rem;
+  height: auto;
+  filter: grayscale(100%);
+  margin: 0rem 5.5rem;
+}
+
+.c-my-flooper__el:hover {
+  filter: grayscale(0%);
+}
+
+@media screen and (max-width: 2000px) {
+  #slider-container {
     overflow-x: hidden;
   }
-  
-  .title-grey {
-    color: var(--grey-color);
-    text-align: center;
-    font-size: 2rem;
-    padding: 20px;
-  }
-  
-  .subtitle-grey {
-    text-align: center;
-    color: var(--grey-color);
-    font-weight: lighter;
-  }
-  
-  /* ------------------HERO------------------ */
-  #montain {
-    background-image: url(../img/montain.png);
-    background-size: cover;
-    height: 90vh;
-  }
-  
-  #montain-title {
-    padding-left: 6rem;
-    color: black;
-  }
-  
-  #montain-title h1 {
-    font-size: 2.5rem;
-  }
-  
-  #montain-title h2 {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-    font-weight: lighter;
-  }
-  
-  .call-action {
-    height: 3.5rem;
-  }
-  
-  /* ------------------ABOUT------------------ */
-  #about {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5rem auto 0;
-  }
-  
-  #about h1 {
-    margin-bottom: 1rem;
-  }
-  
-  /* ------------------SERVICES------------------ */
+}
+
+@media screen and (max-width: 1060px) {
   #services {
-    height: 140vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-image: url(../img/index_background.png);
-    background-size: cover;
+    min-height: 200vh;
+    margin-top: 6rem;
   }
-  
-  #services h1 {
-    padding: 20px;
-    margin-bottom: 2rem;
-  }
-  
+
   #service-gifs {
-    display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-content: center;
   }
-  
+
   .service-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 2rem;
   }
-  
+
   .square {
-    position: relative;
-    width: 12rem;
-    height: 12rem;
-    margin-bottom: 2rem;
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 1rem;
   }
-  
-  .box {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 3rem;
-    -webkit-transition: -webkit-transform 1s;
-    transition: transform 1s;
-  }
-  
-  .box1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 3;
-    border-radius: 4rem;
-    background-color: var(--red-color);
-  }
-  
+
   .box1 img {
-    width: 7rem;
-    height: auto;
+    width: 5rem;
   }
-  
-  .box2 {
-    z-index: 1;
-    background-color: rgb(210, 35, 42, 0.3);
-    transform: rotate(350deg);
+
+  #slider-container {
+    overflow-x: hidden;
   }
-  
-  .box3 {
-    z-index: 2;
-    background-color: rgb(210, 35, 42, 0.1);
-    transform: rotate(100deg);
+}
+
+@media screen and (max-width: 768px) {
+  #montain-title {
+    padding: 3rem 0 0 3rem;
   }
-  
-  .box1:hover {
-    -webkit-transform: rotate(-10deg);
-    transform: rotate(-10deg);
+
+  #montain-title h1 {
+    font-size: 2rem;
   }
-  
-  .box1:hover + .box2 {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+
+  #montain-title h2 {
+    font-size: 1.5rem;
   }
-  
+
   .service-title {
-    font-size: 1.3rem;
-    color: var(--grey-color);
+    font-size: 1.1rem;
   }
-  
-  /* ------------------PROGRESS-BAR------------------ */
-  #work-process {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+
+  .progress-bar {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #montain-title {
+    padding: 1rem 0 0 1rem;
+  }
+
+  .progress-bar button {
+    font-size: 1.1rem;
+  }
+
+  #about {
+    width: 90%;
+  }
+
+  #services {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #montain-title {
+    padding: 0 0 0 1rem;
+  }
+
+  #services {
     margin-top: 5rem;
   }
-  
-  .progress-bar {
-    width: 60%;
-    margin: 4rem auto;
-    padding: 0;
-  }
-  
-  .progress-bar button {
-    width: 33.3%;
-    float: left;
-    position: relative;
-    padding: 0;
-    border: none;
-    color: var(--grey-color);
-    background-color: transparent;
-    text-align: center;
-    font-size: 1.3rem;
-  }
-  
-  .progress-bar button:focus {
-    outline: none;
-  }
-  
-  .progress-bar button:before {
-    width: 2rem;
-    height: 2rem;
-    content: no-close-quote;
-    display: block;
-    margin: 0 auto 0.5rem;
-    border: 0.25rem solid var(--grey-color);
-    border-radius: 50%;
-    text-align: center;
-    background-color: var(--white-color);
-    cursor: pointer;
-  }
-  
-  .progress-bar #step1::before {
-    border: 0.25rem solid var(--red-color);
-  }
-  
-  .progress-bar button:after {
-    top: 1rem;
-    left: -50%;
-    z-index: -1;
-    width: 100%;
-    height: 0.25rem;
-    content: "";
-    position: absolute;
-    background-color: var(--grey-color);
-    cursor: pointer;
-  }
-  
-  .progress-bar button:first-child:after {
-    content: none;
-  }
-  
-  .progress-bar button.active:before {
-    border-color: var(--red-color);
-  }
-  
-  .progress-bar button.active:after {
-    background-color: var(--red-color);
-  }
-  
-  /* ------------------SLIDER------------------ */
-  #slider-container {
-    margin: 12rem auto 10rem;
-  }
-  
-  .c-my-flooper {
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    white-space: nowrap;
-  }
-  
-  .c-my-flooper__el {
-    width: 11rem;
-    height: auto;
-    filter: grayscale(100%);
-    margin: 0 5.5rem;
-  }
-  
-  .c-my-flooper__el:hover {
-    filter: grayscale(0%);
-  }
-  
-  @media screen and (max-width: 2000px) {
-    #slider-container {
-      overflow-x: hidden;
-    }
-  }
-  
-  @media screen and (max-width: 1060px) {
-    #services {
-      height: 200vh;
-      margin-top: 100px;
-    }
-  
-    #service-gifs {
-      flex-direction: column;
-      align-content: center;
-    }
-  
-    .service-box {
-      padding: 20px;
-    }
-  
-    .square {
-      width: 10rem;
-      height: 10rem;
-      margin-bottom: 1rem;
-    }
-  
-    .box1 img {
-      width: 5rem;
-    }
-  
-    #slider-container {
-      overflow-x: hidden;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    #montain-title {
-      padding: 50px 0 0 30px;
-    }
-  
-    #montain-title h1 {
-      font-size: 2rem;
-    }
-  
-    #montain-title h2 {
-      font-size: 1.5rem;
-    }
-  
-    .service-box {
-      padding: 30px;
-    }
-  
-    .service-title {
-      font-size: 1.1rem;
-    }
-  
-    .progress-bar {
-      width: 100%;
-    }
-  }
-  
-  @media screen and (max-width: 500px) {
-    #montain-title {
-      padding: 20px 0 0 20px;
-    }
-  
-    .progress-bar button {
-      font-size: 1.1rem;
-    }
-  
-    #about {
-      width: 90%;
-    }
-  
-    #services {
-      margin-top: 50px;
-    }
-  }
-  
-  @media screen and (max-width: 400px) {
-    #montain-title {
-      padding: 0 0 0 20px;
-    }
-  
-    #services {
-      margin-top: 90px;
-    }
-  }
-  
+}

@@ -36,7 +36,7 @@
     justify-content: center;
     margin-top: 6rem;
     background-image: linear-gradient(#D46A6A 5%, #D2232A 99%);
-    height: 400px;
+    height: 25rem;
     transform: skewY(-5deg);
     -ms-transform: skewY(-5deg);
     -webkit-transform: skewY(-5deg);
@@ -72,10 +72,9 @@
 
 /* ------------------TESTIMONY------------------ */
 #tablet {
-    margin-top: 4rem;
-    min-height: 120vh;
     background-image: url(../img/serv_background.png);
     background-size: cover;
+    padding-bottom: 6rem;
 }
 
 .slogan-text {
@@ -84,7 +83,7 @@
 
 .slogan-text h1,
 .slogan-text p {
-    padding-left: 0;
+    padding-left: 0rem;
     text-align: left;
 }
 
@@ -106,8 +105,8 @@
 }
 
 .testimony iframe {
-    width: 400px;
-    height: 200px;
+    width: 25rem;
+    height: 12.5rem;
     margin-bottom: 1rem;
 }
 
@@ -144,10 +143,6 @@
         width: 100%;
         padding: 0;
     }
-
-    .testimony-section {
-        justify-content: flex-start;
-    }
 }
 
 @media screen and (max-width: 400px) {
@@ -156,6 +151,6 @@
     }
 
     .testimony iframe {
-        width: 300px;
+        width: 18rem;
     }
 }
